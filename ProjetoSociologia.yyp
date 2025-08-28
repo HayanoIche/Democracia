@@ -9,9 +9,17 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "Folders":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"Cenas","folderPath":"folders/Cenas.yy","name":"Cenas","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Fontes","folderPath":"folders/Fontes.yy","name":"Fontes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Imagens","folderPath":"folders/Imagens.yy","name":"Imagens","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"literalmentetudo.csv","CopyToMask":-1,"filePath":"datafiles","name":"literalmentetudo.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -19,12 +27,20 @@
   },
   "name":"ProjetoSociologia",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
+    {"id":{"name":"GameManager","path":"objects/GameManager/GameManager.yy",},},
+    {"id":{"name":"ManagerFoda","path":"objects/ManagerFoda/ManagerFoda.yy",},},
+    {"id":{"name":"obj_NPCBase","path":"objects/obj_NPCBase/obj_NPCBase.yy",},},
+    {"id":{"name":"UiTest","path":"objects/UiTest/UiTest.yy",},},
+    {"id":{"name":"CenaPrinc","path":"rooms/CenaPrinc/CenaPrinc.yy",},},
+    {"id":{"name":"scr_FuncoesFoda","path":"scripts/scr_FuncoesFoda/scr_FuncoesFoda.yy",},},
+    {"id":{"name":"Pessoa","path":"sprites/Pessoa/Pessoa.yy",},},
+    {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"CenaPrinc","path":"rooms/CenaPrinc/CenaPrinc.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
