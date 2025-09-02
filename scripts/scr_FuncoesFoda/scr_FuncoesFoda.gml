@@ -42,3 +42,16 @@ function deny_request(npc_id) {
     //mema coisa eu acho, sla
     instance_destroy(npc_id);
 }
+	
+global.cards = {
+	
+	medico_1 : {
+		nome : "aaa",
+		idade : 2
+	},
+	
+	medico_2 : {
+		nome : "aaa",
+	},
+}
+
