@@ -9,7 +9,7 @@ draw_set_color(c_white);
 draw_set_alpha(day_text_alpha);
 draw_set_font(fnt_main);
 
-var _size = 2;
+var _size = 1;
 var _txt = "DIA 69";
 draw_text_transformed((room_width/2 - string_width(_txt)/2 * (_size)), (room_height/2 - string_height(_txt)/2 * (_size)), _txt, _size, _size, 0);
 

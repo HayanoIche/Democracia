@@ -1,5 +1,5 @@
 // Recursos do game. Dá pra adicionar recursos escondidos pra eventos especiais
-global.font = font_add("font.ttf", 31, false, false, 0, 256);
+global.font = font_add("font.ttf", 16, false, false, 0, 256);
 #macro fnt_main global.font
 
 action_index = "DAY CHANGING";
