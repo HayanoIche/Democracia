@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Pessoa",
-    "path":"sprites/Pessoa/Pessoa.yy",
+    "name":"spr_pessoa",
+    "path":"sprites/spr_pessoa/spr_pessoa.yy",
   },
   "spriteMaskId":null,
   "visible":true,
