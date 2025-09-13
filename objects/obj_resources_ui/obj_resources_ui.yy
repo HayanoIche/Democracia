@@ -8,8 +8,8 @@
   "name":"obj_resources_ui",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Gameplay",
+    "path":"folders/Gameplay.yy",
   },
   "parentObjectId":null,
   "persistent":false,

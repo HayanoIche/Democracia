@@ -1,0 +1,2 @@
+/// @description
+fullscreen_toggle();

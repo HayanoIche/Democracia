@@ -4,7 +4,6 @@ surface = surface_safer(surface, RESOLUTION_WIDTH, textbox_height);
 surface_set_target(surface);
 draw_clear_alpha(c_green, 1);
 
-/*
 // Setup
 if (setup == false)
 {
@@ -276,5 +275,5 @@ for(var _c = 0; _c < draw_char; _c++)
 	draw_set_font(global.font);
 	draw_text_color(char_x[_c, page] + _shake_x, char_y[_c, page] + _float_y + _shake_y, char[_c, page], col_1[_c, page], col_2[_c, page], col_3[_c, page], col_4[_c, page], 1);
 }
-*/
+
 surface_reset_target();

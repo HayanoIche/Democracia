@@ -11,8 +11,8 @@
   "name":"obj_game_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Gameplay",
+    "path":"folders/Gameplay.yy",
   },
   "parentObjectId":null,
   "persistent":true,

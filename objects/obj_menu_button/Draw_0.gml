@@ -11,4 +11,6 @@ if (selected == true) {image_blend = c_yellow} else {image_blend = c_white};
 var _txt = options[index];
 draw_set_color(c_black);
 
-draw_text(x + sprite_width/2 - string_width(_txt)/2, y + sprite_height/2 - string_height(_txt)/2, _txt);
+var _text_size = 1
+
+draw_text_transformed(x + sprite_width/2 - string_width(_txt), y + sprite_height/2 - string_height(_txt), _txt, 2, 2, 0);

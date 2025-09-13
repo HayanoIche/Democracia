@@ -1,8 +1,10 @@
 // Recursos do game. Dá pra adicionar recursos escondidos pra eventos especiais
-global.font = font_add("font.ttf", 16, false, false, 0, 256);
+global.font = font_add("unifont.otf", 12, false, false, 0, 256);
 #macro fnt_main global.font
 
 action_index = "DAY CHANGING";
+
+started = false;
 
 day_text_timer = 0;
 day_text_alpha = 0;
@@ -41,13 +43,15 @@ change_day_cutscene = function()
 		}
 		else {
 			// Dando Fade no Texto
-			if (day_text_timer < 60)
+			if (day_text_timer < 120)
 			{
 				day_text_alpha += 1/60;
 				day_text_timer += 1;
 			}
 			else
 			{
+				room_goto(rm_principal);
+				day_text_alpha = 1;
 				day_changed = true;
 				day_text_timer = 0;
 				timer = 0;
@@ -71,8 +75,10 @@ change_day_cutscene = function()
 			}
 			else
 			{
-				action_index = "CHARACTER INTERACTION";
+				action_index = "WATING SOMEONE";
 			}
 		}
 	}
 }
+
+depth = -9000;

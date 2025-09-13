@@ -1,11 +1,20 @@
 // Baguio Debug
-if (room == rm_menu) {exit};
+if (font_add_get_enable_aa())
+{
+    font_add_enable_aa(false);
+}
+
+if (started == false) {exit};
 
 switch(action_index)
 {
 	// "Cutscen e de trocar de dia
 	case "DAY CHANGING": {
 			change_day_cutscene();
+		break; }
+		
+	case "WAITING SOMEONE": {
+	
 		break; }
 		
 	case "CHARACTER INTERACTION": {

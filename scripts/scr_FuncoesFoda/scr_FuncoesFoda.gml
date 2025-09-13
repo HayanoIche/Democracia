@@ -1,6 +1,3 @@
-#macro RESOLUTION_WIDTH		800
-#macro RESOLUTION_HEIGHT	450
-
 global.used_cards = []; // Cuida de quais cards foram utilizados
 global.allow_card_repetition = false; // Deixe em true pra repetir cards
 

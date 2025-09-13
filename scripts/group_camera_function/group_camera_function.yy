@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"group_camera_function",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"group_camera_function",
+  "parent":{
+    "name":"Camera",
+    "path":"folders/Camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
