@@ -1,4 +1,6 @@
 // Baguio Debug
+if (room == rm_menu) {exit};
+
 switch(action_index)
 {
 	// "Cutscen e de trocar de dia

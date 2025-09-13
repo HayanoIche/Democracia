@@ -241,6 +241,4 @@ global.cards = {
 		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
 		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
 	},
-	
-	
 }

@@ -1,3 +1,6 @@
+#macro RESOLUTION_WIDTH		800
+#macro RESOLUTION_HEIGHT	450
+
 global.used_cards = []; // Cuida de quais cards foram utilizados
 global.allow_card_repetition = false; // Deixe em true pra repetir cards
 
@@ -74,7 +77,6 @@ function deny_request(npc_id) {
     apply_effects(effects);                 
     instance_destroy(npc_id);	
 }
-
 
 function apply_effects(effect_string) {
     var effects = string_split(effect_string, ";");
