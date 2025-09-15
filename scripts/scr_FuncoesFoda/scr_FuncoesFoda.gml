@@ -5,15 +5,20 @@ function bring_new_person() {
     // Pegar todos os cards
     var all_cards = variable_struct_get_names(global.cards);
     
-    // Basicamente filtra os cards que já foram usados
-    var available_cards = all_cards;
-    if (!global.allow_card_repetition && array_length(global.used_cards) > 0) {
-        available_cards = [];
+    // Inicializar available_cards corretamente
+    var available_cards = [];
+    
+    // Filtrar cards baseado na configuração de repetição
+    if (global.allow_card_repetition) {
+        // Se repetição permitida, usar todos os cards
+        available_cards = all_cards;
+    } else {
+        // Se repetição não permitida, filtrar cards não usados
         for (var i = 0; i < array_length(all_cards); i++) {
             var card_id = all_cards[i];
             var is_used = false;
             
-            // Esse card já foi usado? Sim ou não? VVai repetir até achar um card q não foi
+            // Verificar se o card já foi usado
             for (var j = 0; j < array_length(global.used_cards); j++) {
                 if (global.used_cards[j] == card_id) {
                     is_used = true;
@@ -21,13 +26,13 @@ function bring_new_person() {
                 }
             }
             
-            // Adicionar a lista de cards disponiveis
+            // Adicionar à lista de cards disponíveis se não foi usado
             if (!is_used) {
                 array_push(available_cards, card_id);
             }
         }
         
-        // Caso por alguma forma merdelância vc conseguir usar TODOS os cards, reseta a lista
+        // Caso todos os cards tenham sido usados, resetar a lista
         if (array_length(available_cards) == 0) {
             global.used_cards = [];
             available_cards = all_cards;
@@ -40,21 +45,20 @@ function bring_new_person() {
     var random_key = available_cards[random_index];
     var selected_card = variable_struct_get(global.cards, random_key);
     
-    // Adicionar a lista de cards se a repetição tiver desativada 
+    // Adicionar à lista de cards usados se a repetição tiver desativada 
     if (!global.allow_card_repetition) {
         array_push(global.used_cards, random_key);
     }
     
-    // Criar novo NPC (cara eu sei q é redundante comentar tanto assim no código mas é pq eu simplesmente
-	// não vou conseguir lembrar oq cada coisa faz por um tempo, ainda to aprendendo a engine)
+    // Criar novo NPC
     var new_npc = instance_create_depth(750, 350, 0, obj_NPCBase);
     
     // coloca as infos dos cards no OBJ_Newnpc
     new_npc.sprite_index = asset_get_index(selected_card.sprite);
-	new_npc.request_text = selected_card.fala;
-	new_npc.papel = selected_card.papel;
-	new_npc.aprovar = selected_card.aprovar;
-	new_npc.negar = selected_card.negar;
+    new_npc.request_text = selected_card.fala;
+    new_npc.papel = selected_card.papel;
+    new_npc.aprovar = selected_card.aprovar;
+    new_npc.negar = selected_card.negar;
     new_npc.card_data = selected_card;
     new_npc.card_id = random_key;
     
@@ -63,6 +67,7 @@ function bring_new_person() {
     return new_npc;
 }
 
+// As outras funções permanecem inalteradas
 function approve_request(npc_id) {
     var effects = npc_id.card_data.aceito;  
     apply_effects(effects);                 
@@ -81,8 +86,6 @@ function apply_effects(effect_string) {
         var effect = string_trim(effects[i]);
         if (effect == "") continue;
         
-        // mn, mt scuffed e mt provavel q vá bugar eventualmente mas ele pega
-		// espaços vazios e separa usando isso, não é NEM UM POUCO DINÂMICO
         var space_pos = string_pos(" ", effect);
         if (space_pos == 0) continue; // Pular
         
@@ -109,10 +112,8 @@ function apply_effects(effect_string) {
                 global.resources.comida += amount;
                 break;
             default:
-                show_debug_message("Que porra de recurso é esse aqui: " + resource); //Caso dê um valor desconhecido
+                show_debug_message("Que porra de recurso é esse aqui: " + resource);
                 break;
         }
-        
-       
     }
 }

@@ -11,10 +11,10 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Camera","folderPath":"folders/Camera.yy","name":"Camera","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Gameplay","folderPath":"folders/Gameplay.yy","name":"Gameplay","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Imagens","folderPath":"folders/Imagens.yy","name":"Imagens","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Gameplay","folderPath":"folders/Gameplay.yy","name":"Gameplay","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Textbox","folderPath":"folders/Textbox.yy","name":"Textbox","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -31,6 +31,7 @@
   "resources":[
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"obj_clock","path":"objects/obj_clock/obj_clock.yy",},},
     {"id":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},},
     {"id":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},},
     {"id":{"name":"obj_mouse","path":"objects/obj_mouse/obj_mouse.yy",},},
@@ -45,6 +46,7 @@
     {"id":{"name":"scr_cartas","path":"scripts/scr_cartas/scr_cartas.yy",},},
     {"id":{"name":"scr_FuncoesFoda","path":"scripts/scr_FuncoesFoda/scr_FuncoesFoda.yy",},},
     {"id":{"name":"scr_game_text","path":"scripts/scr_game_text/scr_game_text.yy",},},
+    {"id":{"name":"scr_Relogio","path":"scripts/scr_Relogio/scr_Relogio.yy",},},
     {"id":{"name":"scr_text_functions","path":"scripts/scr_text_functions/scr_text_functions.yy",},},
     {"id":{"name":"snd_text_generic","path":"sounds/snd_text_generic/snd_text_generic.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
