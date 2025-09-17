@@ -77,7 +77,7 @@ change_day_cutscene = function()
 			}
 			else
 			{
-				action_index = "CHARACTER INTERACTION";
+				action_index = "WAITING SOMEONE";
 				clock_start()
 			}
 		}

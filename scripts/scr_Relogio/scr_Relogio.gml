@@ -4,11 +4,13 @@ function clock_init() {
         time_current: 9 * 60,  // Começa as 9 (em minutos)
         day_start: 9 * 60,     // 9:00 em minutos
         day_end: 18 * 60,      // 18:00 em minutos
-        time_scale: 2,         // Default: 2 minutos pra cada segundo real
+        time_scale: 30,         // Default: 2 minutos pra cada segundo real
         is_running: false,
         day_length_seconds: 540, // Default: 540 segundos reais pra um dia completo
 		day_over: false
     };
+	
+	global.day = 1;
 }
 
 // Função que faz override no day_leght pra mudar horário mais facil
@@ -69,9 +71,21 @@ function clock_get_time_string() {
     hours = hours mod 24;
     
     // Formatação com 0 na frente
-    var hour_str = string_format(hours, 2, 0);
-    var minute_str = string_format(minutes, 2, 0);
+    var hour_str = string(hours);
+    var minute_str = string(floor(minutes/10));
     
+	if (floor(minutes/10) > 0) {
+		minute_str = minute_str + "0";
+	}
+	
+	if (hours < 10) {
+		hour_str = "0" + hour_str;
+	}
+	
+	if (minutes < 10) {
+		minute_str = "0" + minute_str;
+	}
+	
     return hour_str + ":" + minute_str;
 }
 
@@ -109,14 +123,42 @@ function clock_reset_to_zero() {
     show_debug_message("Relógio resetado para 00:00");
 }
 
+function person_choose()
+{
+	// chamar a pessoa baseado no dia, se  ela já veio, se ela já veio no dia e afins
+}
+
+function person_time_choose(_time_index)
+{
+	// escolher o tempo pra essa pessoa vir, atrasando e tals
+}
+
 function day_started() {
 	day_over = false;
+	
+	global.day_bluds =
+	{
+		first :
+		{
+			person : person_choose(),
+			time : person_time_choose(1)
+		},
+		
+		second :
+		{
+			
+		},
+		
+		
+	}
+	
     show_debug_message("Dia começou as " + clock_get_time_string());
 }
 
 // Caso a gnt queira mudar oq cada função faz
 function day_ended() {
 	day_over = true;
+	global.day += 1;
     show_debug_message("Dia acabou as " + clock_get_time_string());
 }
 

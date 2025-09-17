@@ -16,7 +16,7 @@ if (action_index == "DAY CHANGING")
 	draw_set_font(fnt_main);
 	
 	var _size = 3;
-	var _txt = "DIA 69";
+	var _txt = "DIA " + string(global.day);
 	draw_text_transformed((room_width/2 - string_width(_txt)/2 * (_size)), (room_height/2 - string_height(_txt)/2 * (_size)), _txt, _size, _size, 0);
 	
 	draw_set_alpha(1);
@@ -24,4 +24,7 @@ if (action_index == "DAY CHANGING")
 else
 {
 	draw_sprite_ext(spr_background, 0, 0, 0, 2, 2, 0, c_white, 1);
+	
+	draw_text(200, 200, clock_get_time_string());
+	
 }

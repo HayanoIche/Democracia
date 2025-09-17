@@ -22,8 +22,14 @@ switch(action_index)
 		break; }
 		
 	case "WAITING SOMEONE": {
-			 
-		break; }
+			// caso já tenha alguém aqui ele coloca a próxima na lista de espera
+			
+			if (clock_get_time_string() == "10:00")
+			{
+			action_index = "CHARACTER INTERACTION";
+			}
+			break;
+		}
 		
 	case "CHARACTER INTERACTION": {
 		instance_create_depth(0, 0, depth - 1, obj_resources_ui);
