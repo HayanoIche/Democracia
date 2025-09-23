@@ -3,10 +3,9 @@ function clock_init() {
     global.clock = {
         time_current: 9 * 60,  // Começa as 9 (em minutos)
         day_start: 9 * 60,     // 9:00 em minutos
-        day_end: 18 * 60,      // 18:00 em minutos
-        time_scale: 30,         // Default: 2 minutos pra cada segundo real
+        day_end: 19 * 60,      // 19:00 em minutos
+        time_scale: 15,         // Default: 2 minutos pra cada segundo real
         is_running: false,
-        day_length_seconds: 540, // Default: 540 segundos reais pra um dia completo
 		day_over: false
     };
 	
@@ -17,7 +16,6 @@ function clock_init() {
 function clock_set_day_length(seconds) {
     if (!variable_global_exists("clock")) clock_init();
     
-    global.clock.day_length_seconds = seconds;
    // Calculo do timescale
     var day_duration_minutes = global.clock.day_end - global.clock.day_start;
     global.clock.time_scale = day_duration_minutes / seconds;
@@ -60,10 +58,8 @@ function clock_update() {
 }
 
 // Getter do tempo atual como uma string formatada em HH:MM
-function clock_get_time_string() {
-    if (!variable_global_exists("clock")) return "09:00";
-    
-    var total_minutes = round(global.clock.time_current);
+function clock_get_time_string(_clock = global.clock.time_current) {
+    var total_minutes = round(_clock);
     var hours = floor(total_minutes / 60);
     var minutes = total_minutes mod 60;
     
@@ -130,29 +126,40 @@ function person_choose()
 
 function person_time_choose(_time_index)
 {
-	// escolher o tempo pra essa pessoa vir, atrasando e tals
+	var _times = [600, 750, 840, 960, 1080];
+	var _delay = choose(-22, -11, 0, 11, 22);
+	
+	var _time = _times[_time_index-1] + _delay;
+	
+	return _time;
 }
 
 function day_started() {
 	day_over = false;
 	
-	global.day_bluds =
+	global.persons =
 	{
-		first :
-		{
-			person : person_choose(),
-			time : person_time_choose(1)
+		first : {
+			person : person_choose(), time : person_time_choose(1)
 		},
 		
-		second :
-		{
-			
+		second : {
+			person : person_choose(), time : person_time_choose(2)
 		},
 		
+		third : {
+			person : person_choose(), time : person_time_choose(3)
+		},
 		
+		fourth : {
+			person : person_choose(), time : person_time_choose(4)
+		},
+		
+		fifth : {
+			person : person_choose(), time : person_time_choose(5)
+		},
 	}
 	
-    show_debug_message("Dia começou as " + clock_get_time_string());
 }
 
 // Caso a gnt queira mudar oq cada função faz

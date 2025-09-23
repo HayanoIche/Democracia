@@ -1,5 +1,15 @@
 /// @description
-draw_self();
+if (keyboard_check_pressed(ord("A")))
+{
+	approve_request(self);
+}
+
+if (keyboard_check_pressed(ord("D")))
+{
+	deny_request(self);
+}
+
+draw_sprite(spr_flim, 0, RESOLUTION_WIDTH/2, 80)
 
 // Desenhar UI fodidinha
 if (instance_exists(obj_game_manager.current_npc)) {

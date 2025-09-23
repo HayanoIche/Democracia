@@ -75,9 +75,9 @@ function approve_request(npc_id) {
 }
 
 function deny_request(npc_id) {
-    var effects = npc_id.card_data.negado;  
-    apply_effects(effects);                 
-    instance_destroy(npc_id);	
+    var effects = npc_id.card_data.negado;
+    apply_effects(effects);
+    instance_destroy(npc_id);
 }
 
 function apply_effects(effect_string) {

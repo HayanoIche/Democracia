@@ -61,6 +61,8 @@ change_day_cutscene = function()
 		}
 	}
 	else {
+		obj_background.can_draw = true;
+		
 		// Fade Out no texto
 		if (day_text_timer < 60)
 		{

@@ -22,29 +22,85 @@ switch(action_index)
 		break; }
 		
 	case "WAITING SOMEONE": {
-			// caso já tenha alguém aqui ele coloca a próxima na lista de espera
-			
-			if (clock_get_time_string() == "10:00")
-			{
+		// caso já tenha alguém aqui ele coloca a próxima na lista de espera
+		if abs(global.clock.time_current - global.persons.first.time) < 1
+		|| abs(global.clock.time_current - global.persons.second.time) < 1
+		|| abs(global.clock.time_current - global.persons.third.time) < 1
+		|| abs(global.clock.time_current - global.persons.fourth.time) < 1
+		|| abs(global.clock.time_current - global.persons.fifth.time) < 1
+		{
 			action_index = "CHARACTER INTERACTION";
-			}
-			break;
+			timer = 60*5;
+			show_debug_message(clock_get_time_string());
 		}
+		
+		break; }
 		
 	case "CHARACTER INTERACTION": {
-		instance_create_depth(0, 0, depth - 1, obj_resources_ui);
+		if (timer == 60 * 5) {audio_play_sound(snd_door_knock, 8, false)};
 		
-		if (!instance_exists(obj_NPCBase)) {
-			if (npc_count < npc_total_per_day || is_day_over()) 
+		if (timer <= 60*4) && (timer > 60*2)
+		{
+			if (day_background_alpha < 1)
 			{
-				current_npc = bring_new_person();
-				npc_count += 1;
-			}
-			else
-			{
-				finalizar_dia()
+				day_background_alpha += 1/60;
 			}
 		}
+		
+		if (timer <= 60*1)
+		{
+			if (day_background_alpha > 0)
+			{
+				day_background_alpha -= 1/60;
+				
+				if (!instance_exists(obj_NPCBase)) {
+					current_npc = bring_new_person();
+					npc_count += 1;
+				}
+			}
+		}
+		
+		if (timer <= 0)
+		{
+			action_index = "APPOINTMENT";
+			timer = 60*2;
+		}
+		
+		if (timer > 0)
+		{
+			timer -= 1;
+		}
+		break; }
+		
+	case "APPOINTMENT": {
+		if (!instance_exists(obj_NPCBase))
+		{
+			if (timer <= 60*2) && (timer > 60*1)
+			{
+				if (day_background_alpha < 1)
+				{
+					day_background_alpha += 1/60;
+				}
+			}
+			
+			if (timer <= 60*1)
+			{
+				if (day_background_alpha > 0)
+				{
+					day_background_alpha -= 1/60;
+				}
+			}
+		
+			if (timer <= 0) {
+				action_index = "WAITING SOMEONE";
+			}
+		}
+		
+		if (timer > 0)
+		{
+			timer -= 1;
+		}
+		
 		break; }
 }
 
