@@ -19,8 +19,6 @@ if (action_index == "DAY CHANGING")
 }
 else
 {
-	draw_sprite_ext(spr_table, 0, 0, 0, 2, 2, 0, c_white, 1);
-	
 	draw_set_color(c_black);
 	draw_set_alpha(day_background_alpha);
 	draw_rectangle(0, 0, room_width, room_height, false);
@@ -49,3 +47,5 @@ else
 	draw_set_color(c_white);
 
 }
+
+draw_text(20, 20, fps_real);

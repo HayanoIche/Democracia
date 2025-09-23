@@ -6,3 +6,5 @@ aprovar = "";
 negar = "";
 
 depth = -8500;
+
+alarm[0] = 30;

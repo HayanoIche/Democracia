@@ -1,8 +1,8 @@
 /// @description
-surface = surface_safer(surface, RESOLUTION_WIDTH, textbox_height);
+surface = surface_safer(surface, textbox_width, textbox_height);
 
 surface_set_target(surface);
-draw_clear_alpha(c_green, 1);
+draw_clear_alpha(c_white, 0);
 
 // Setup
 if (setup == false)
@@ -24,8 +24,8 @@ if (setup == false)
 		// No character on screen
 		if (speaker_sprite[_p] == noone)
 		{
-			textbox_width[_p] = textbox_width[0];
-			textbox_x_offset[_p] = (RESOLUTION_WIDTH/2) - (textbox_width[_p]/2);
+			textbox_width = textbox_width;
+			textbox_x_offset[_p] = 0;
 			text_x_offset[_p] = textbox_x_offset[_p] + border;
 		}
 		
@@ -102,9 +102,9 @@ if (text_pause_timer <= 0)
 {
 	if (draw_char < text_lenght[page])
 	{
-		draw_char += text_spd;
+		draw_char += text_spd * delta;
 		draw_char = clamp(draw_char, 0, text_lenght[page]);
-		var _check_char = string_char_at(text[page], draw_char)
+		var _check_char = string_char_at(text[page], draw_char);
 		
 		if (_check_char == "." || _check_char == "?" || _check_char == "!" || _check_char == ",")
 		{
@@ -117,7 +117,7 @@ if (text_pause_timer <= 0)
 			if (snd_count < snd_delay)
 			{
 				snd_count++;
-			} 
+			}
 			else
 			{
 				snd_count = 0;
@@ -211,7 +211,7 @@ txtb_spr_w = sprite_get_width(txtb_spr[page]);
 txtb_spr_h = sprite_get_height(txtb_spr[page]);
 
 //back of the textbox
-draw_sprite_ext(textbox_spr, 0, _txtb_x, _txtb_y, textbox_width[page]/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_gray, 1);
+draw_sprite_ext(textbox_spr, 0, _txtb_x, _txtb_y, textbox_width/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_gray, 1);
 
 //draw the speaker
 if (speaker_sprite[page] != noone)
@@ -277,3 +277,5 @@ for(var _c = 0; _c < draw_char; _c++)
 }
 
 surface_reset_target();
+
+draw_surface_ext(surface, 480, 150, 1, 1, 0, c_white, 1);

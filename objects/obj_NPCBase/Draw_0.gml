@@ -11,6 +11,7 @@ if (keyboard_check_pressed(ord("D")))
 
 draw_sprite(spr_flim, 0, RESOLUTION_WIDTH/2, 80)
 
+/*
 // Desenhar UI fodidinha
 if (instance_exists(obj_game_manager.current_npc)) {
 	draw_set_colour(c_white)
@@ -18,3 +19,4 @@ if (instance_exists(obj_game_manager.current_npc)) {
 	draw_set_colour(c_white)
     draw_text(250, 150, "Aprovado ou negado? A de aprovado, D de negado.");
 }
+*/

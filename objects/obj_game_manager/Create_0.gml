@@ -2,6 +2,9 @@
 global.font = font_add("unifont.otf", 12, false, false, 0, 256);
 #macro fnt_main global.font
 
+global.delta_t = delta_time / 1000000;
+#macro delta global.delta_t
+
 action_index = "DAY CHANGING";
 
 started = false;
@@ -57,12 +60,13 @@ change_day_cutscene = function()
 				day_changed = true;
 				day_text_timer = 0;
 				timer = 0;
+				
+				instance_create_depth(0, 0, depth, obj_background);
+				instance_create_depth(0, 0, depth, obj_table);
 			}
 		}
 	}
 	else {
-		obj_background.can_draw = true;
-		
 		// Fade Out no texto
 		if (day_text_timer < 60)
 		{

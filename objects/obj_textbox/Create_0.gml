@@ -1,8 +1,8 @@
 //Textbox parameters
 textbox_x = 0;
 textbox_y = 0;
-textbox_width[0] = 340;
-textbox_height = 102;
+textbox_width = 300;
+textbox_height = 110;
 textbox_spr = spr_textbox;
 
 textbox_x_offset = 0;
@@ -13,9 +13,9 @@ txtb_spr_w = 0;
 txtb_spr_h = 0;
 
 //Text Settings
-border = 9;
+border = 19;
 line_sep = string_height("T") + 3;
-line_width = textbox_width[0] - (border+4)*2;
+line_width = textbox_width - (border+4)*2;
 
 can_skip = true;
 
@@ -55,6 +55,6 @@ setup = false;
 time = 120;
 text_timer = 0;
 
-surface = surface_create(RESOLUTION_WIDTH, textbox_height);
+surface = surface_create(textbox_width, textbox_height);
 
 depth = -9999;

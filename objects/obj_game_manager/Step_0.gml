@@ -1,5 +1,8 @@
 // Baguio Debug
 clock_update();
+
+delta = ((delta_time/1000000) * game_get_speed(gamespeed_fps));
+
 //show_debug_message(clock_get_time_string())
 resource_check()
 

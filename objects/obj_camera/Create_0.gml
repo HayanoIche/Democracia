@@ -17,4 +17,6 @@ surface_resize(application_surface, global.surface_width, global.surface_height)
 
 application_surface_draw_enable(false);
 
+game_set_speed(60, gamespeed_fps);
+
 surface_correct();
