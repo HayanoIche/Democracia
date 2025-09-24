@@ -57,4 +57,4 @@ text_timer = 0;
 
 surface = surface_create(textbox_width, textbox_height);
 
-depth = -9999;
+depth = -8500;

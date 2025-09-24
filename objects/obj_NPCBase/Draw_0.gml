@@ -9,7 +9,7 @@ if (keyboard_check_pressed(ord("D")))
 	deny_request(self);
 }
 
-draw_sprite(spr_flim, 0, RESOLUTION_WIDTH/2, 80)
+draw_sprite_ext(spr_flim, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
 
 /*
 // Desenhar UI fodidinha
