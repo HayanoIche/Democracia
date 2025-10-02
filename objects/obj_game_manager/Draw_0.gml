@@ -1,6 +1,16 @@
 /// @description
 if (started == false) {exit};
 
+if (action_index == "TUTORIAL")
+|| (action_index == "DAY CHANGING")
+{
+	if (day_background_alpha < 1)
+	&& (room == rm_menu)
+	{
+		draw_sprite_ext(spr_tutorial, 0, 0, 0, 2, 2, 0, c_white, 1);
+	}
+}
+
 if (action_index == "DAY CHANGING")
 {
 	draw_set_color(c_black);

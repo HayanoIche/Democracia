@@ -1,8 +1,21 @@
+global.people = {
+	bispo : {
+		nome : "Líder de facção",
+		sprite_idle: spr_bispo_parado,
+		sprite_talk: spr_bispo_fala,
+		sprite_angry: spr_bispo_bravo,
+		sprite_happy: spr_bispo_feliz
+	},
+	
+	traficante : {
+		nome : "Líder de Facção",
+	}
+}
+
 global.cards = {
 	
 	faccao_1 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Vou mudar as rotas de patrulha hoje.",
 		aceito: "+10 Din ; -5 inf; -5 aprov",
 		negar: "Crime não tem lugar no país.",
@@ -12,8 +25,7 @@ global.cards = {
 	},
 	
 	faccao_2 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "O morador não merece passar por isso.",
 		aceito: "-10 Din ; +10 inf",
 		negar: "Não negocio com terroristas.",
@@ -23,8 +35,7 @@ global.cards = {
 	},
 	
 	faccao_3 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Vou garantir que o caminho esteja limpo.",
 		aceito: "+10 Din ; -5 inf; -5 aprov",
 		negar: "Vaculhem os contêineres.",
@@ -34,8 +45,7 @@ global.cards = {
 	},
 	
 	faccao_4 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Para mais um termo na presidência!",
 		aceito: "+15 aprov ; -10 inf",
 		negar: "O Fortunato é um corrupto, investiguem ele!",
@@ -45,8 +55,7 @@ global.cards = {
 	},
 	
 	faccao_5 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Eles não vão te incomodar.",
 		aceito: "+10 com ; -5 inf; -15 aprov",
 		negar: "Nem pensar.",
@@ -56,8 +65,7 @@ global.cards = {
 	},
 	
 	faccao_6 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Aqui estão as rotas.",
 		aceito: "+15 Din ; -5 inf; -5 aprov",
 		negar: "Mais policiamento nas rodovias.",
@@ -67,8 +75,7 @@ global.cards = {
 	},
 	
 	faccao_7 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Eles já foram despensados.",
 		aceito: "-10 aprov ; +10 inf;",
 		negar: "Polícia é para proteger o povo.",
@@ -78,8 +85,7 @@ global.cards = {
 	},
 	
 	faccao_8 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Eles vão entender com o tempo.",
 		aceito: "+10 Din ; -5 inf ; -10 aprov",
 		negar: "Acalme eles.",
@@ -89,8 +95,7 @@ global.cards = {
 	},
 	
 	faccao_9 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Eu irei investir nas estradas.",
 		aceito: "-5 din ; +5 inf ; +10 comida",
 		negar: "Existem coisas mais importantes no momento.",
@@ -100,8 +105,7 @@ global.cards = {
 	},
 	
 	faccao_10 : {
-		nome : "Líder de facção",
-		sprite : "spr_liderdefac",
+		owner : global.people.traficante,
 		aprovar: "Irei ver o que posso fazer.",
 		aceito: "-10 Din ; -5 inf ; + 15 aprov",
 		negar: "Se vira.",

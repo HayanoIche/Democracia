@@ -19,6 +19,20 @@ if (is_day_over()) {
 
 switch(action_index)
 {
+	case "TUTORIAL": {
+			if (instance_exists(obj_menu_button)) {
+				instance_destroy(obj_menu_button);
+			}
+			
+			if (!instance_exists(obj_proceed))
+			{
+				var _p = instance_create_depth(800/2 + 150, 500 - 102, -1000, obj_proceed);
+				_p.image_xscale = 9;
+				_p.image_yscale = 3;
+			}
+			
+		break; }
+	
 	// "Cutscen e de trocar de dia
 	case "DAY CHANGING": {
 			change_day_cutscene();
