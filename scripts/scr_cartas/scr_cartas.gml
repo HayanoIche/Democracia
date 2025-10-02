@@ -115,8 +115,7 @@ global.cards = {
 	},
 	
 	bispo_1: {
-		nome : "Bispo",
-		sprite : "spr_bispo",
+		owner : global.people.bispo,
 		aprovar: "Tomaremos providencias.",
 		aceito: "-5 inf ; +15 aprov",
 		negar: "É um investimento futuro.",
@@ -126,8 +125,7 @@ global.cards = {
 	},
 	
 	bispo_2: {
-		nome : "Bispo",
-		sprite : "spr_bispo",
+		owner : global.people.bispo,
 		aprovar: "Deixe o povo descansar.",
 		aceito: "-5 Din ; +5 aprov",
 		negar: "Já existem feriados demais.",
@@ -137,8 +135,7 @@ global.cards = {
 	},
 	
 	bispo_3: {
-		nome : "Bispo",
-		sprite : "spr_bispo",
+		owner : global.people.bispo,
 		aprovar: "Investirei em mais espaços.",
 		aceito: "-10 Din ; +5 inf ; +5 aprov",
 		negar: "Temos outras prioridades.",
