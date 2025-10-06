@@ -1,10 +1,10 @@
 // Baguio Debug
 clock_update();
 
-delta = ((delta_time/1000000) * game_get_speed(gamespeed_fps));
+global.delta_t = (delta_time/1000000) * game_get_speed(gamespeed_fps);
 
 //show_debug_message(clock_get_time_string())
-resource_check()
+resource_check();
 
 if (font_add_get_enable_aa())
 {
@@ -149,15 +149,19 @@ function resource_failure(resource_name) {
         case "comida":
             show_message("FAILURE: Você ficou sem comida! Seus cidadões estão passando fome!");
             break;
+			
         case "aprovacao":
             show_message("FAILURE: Taxa de aprovação muito baixa! Impeachment!");
             break;
+			
         case "dinheiro":
             show_message("FAILURE: Crise finânceira!");
             break;
+			
         case "infraestrutura":
             show_message("FAILURE: Infraestrutura colapsou!");
             break;
+			
         default:
             show_message("Não era pra isso aparecer || ERRO NO SISTEMA DE MOSTRAR FALHAS");
             break;

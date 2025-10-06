@@ -5,6 +5,10 @@ papel = ""; // Isso é oq na teoria estaria escrito no papel q é levantado na c
 aprovar = "";
 negar = "";
 
+idle_sprite = undefined;
+talk_sprite = undefined;
+happy_sprite = undefined;
+
 depth = -8500;
 
 alarm[0] = 30;

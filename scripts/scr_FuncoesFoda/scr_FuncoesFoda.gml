@@ -54,7 +54,11 @@ function bring_new_person() {
     var new_npc = instance_create_depth(750, 350, 0, obj_NPCBase);
     
     // coloca as infos dos cards no OBJ_Newnpc
-    new_npc.sprite_index = asset_get_index(selected_card.sprite);
+    new_npc.sprite_index = selected_card.owner.sprite_idle;
+	new_npc.idle_sprite = selected_card.owner.sprite_idle;
+	new_npc.talk_sprite = selected_card.owner.sprite_talk;
+	new_npc.happy_sprite = selected_card.owner.sprite_happy;
+	
     new_npc.request_text = selected_card.fala;
     new_npc.papel = selected_card.papel;
     new_npc.aprovar = selected_card.aprovar;

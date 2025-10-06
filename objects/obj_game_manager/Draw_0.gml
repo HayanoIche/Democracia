@@ -1,6 +1,8 @@
 /// @description
 if (started == false) {exit};
 
+
+
 if (action_index == "TUTORIAL")
 || (action_index == "DAY CHANGING")
 {
@@ -58,4 +60,18 @@ else
 
 }
 
-draw_text(20, 20, fps_real);
+
+if (keyboard_check(vk_numpad0))
+{
+	draw_sprite_ext(global.people.bispo.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}
+
+if (keyboard_check(vk_numpad1))
+{
+	draw_sprite_ext(global.people.reporter.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}
+
+if (keyboard_check(vk_numpad2))
+{
+	draw_sprite_ext(global.people.traficante.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}

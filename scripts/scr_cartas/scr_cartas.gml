@@ -1,14 +1,26 @@
 global.people = {
 	bispo : {
-		nome : "Líder de facção",
-		sprite_idle: spr_bispo_parado,
-		sprite_talk: spr_bispo_fala,
+		nome : "Bispo",
+		sprite_idle: spr_ministro_parado,
+		sprite_talk: spr_ministro_parado,
 		sprite_angry: spr_bispo_bravo,
 		sprite_happy: spr_bispo_feliz
 	},
 	
 	traficante : {
 		nome : "Líder de Facção",
+		sprite_idle: spr_bispo_parado,
+		sprite_talk: spr_bispo_fala,
+		sprite_angry: spr_bispo_bravo,
+		sprite_happy: spr_bispo_feliz
+	},
+	
+	reporter : {
+		nome : "Reporter",
+		sprite_idle: spr_reporter_parada,
+		sprite_talk: spr_reporter_fala,
+		sprite_angry: spr_reporter_brava,
+		sprite_happy: spr_reporter_feliz
 	}
 }
 

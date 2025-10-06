@@ -3,7 +3,7 @@ global.font = font_add("unifont.otf", 12, false, false, 0, 256);
 #macro fnt_main global.font
 
 global.delta_t = delta_time / 1000000;
-#macro delta global.delta_t
+#macro delta global.delta_t;
 
 action_index = "TUTORIAL";
 
