@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Imagens",
-    "path":"folders/Imagens.yy",
+    "name":"Fundos",
+    "path":"folders/Imagens/Fundos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
