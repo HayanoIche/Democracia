@@ -58,6 +58,12 @@ function bring_new_person() {
 	new_npc.idle_sprite = selected_card.owner.sprite_idle;
 	new_npc.talk_sprite = selected_card.owner.sprite_talk;
 	new_npc.happy_sprite = selected_card.owner.sprite_happy;
+	new_npc.angry_sprite = selected_card.owner.sprite_angry;
+	
+	new_npc.front_idle_sprite = selected_card.owner.sprite_idle_front;
+	new_npc.front_talk_sprite = selected_card.owner.sprite_talk_front;
+	new_npc.front_happy_sprite = selected_card.owner.sprite_happy_front;
+	new_npc.front_angry_sprite = selected_card.owner.sprite_angry_front;
 	
     new_npc.request_text = selected_card.fala;
     new_npc.papel = selected_card.papel;

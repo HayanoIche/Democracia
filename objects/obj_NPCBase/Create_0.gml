@@ -7,6 +7,14 @@ negar = "";
 idle_sprite = undefined;
 talk_sprite = undefined;
 happy_sprite = undefined;
+angry_sprite = undefined;
+
+front_idle_sprite = undefined;
+front_talk_sprite = undefined;
+front_happy_sprite = undefined;
+front_angry_sprite = undefined;
+
+front_sprite_index = undefined;
 
 state = "";
 
@@ -14,8 +22,7 @@ depth = -8500;
 
 alarm[0] = 30;
 
+instance_create_depth(x, y, depth, obj_NPCBase_front);
+
 x = RESOLUTION_WIDTH/2;
 y = 80;
-
-var _arm = instance_create_depth(x, y, depth, obj_NPCBase_arm);
-_arm.sprite_index = spr_traficante_parado_braco;

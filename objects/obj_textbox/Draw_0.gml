@@ -138,70 +138,35 @@ else
 	text_pause_timer--;
 }
 
-if (can_skip == true)
+if (mouse_check_button_pressed(mb_left))
 {
-	if (keyboard_check_pressed(vk_enter))
-	{
-		//if the typing is done
-		if (draw_char == text_lenght[page])
-		{
-			//next page
-			if (page < page_number - 1)
-			{
-				page++;
-				draw_char = 0;
-			}
-			else
-			{
-				//link text for options
-				if (option_number > 0)
-				{
-					create_textbox(option_link_id[option_pos]);
-				}
-				
-				surface_reset_target();
-				instance_destroy();
-				exit;
-			}
-		}
-	}
-	
-	if (keyboard_check_pressed(vk_shift))
-	{
-		draw_char = text_lenght[page];
-	}
-}
-else if (can_skip == false)
-{
+	//if the typing is done
 	if (draw_char == text_lenght[page])
 	{
-		if (text_timer < 120)
+		//next page
+		if (page < page_number - 1)
 		{
-			text_timer += 1;
+			page++;
+			draw_char = 0;
 		}
-		
-		if (text_timer >= 120)
+		else
 		{
-			//next page
-			if (page < page_number - 1)
+			//link text for options
+			if (option_number > 0)
 			{
-				page++;
-				draw_char = 0;
+				create_textbox(option_link_id[option_pos]);
 			}
-			//Destroy textbox
-			else
-			{
-				//link text for options
-				if (option_number > 0)
-				{
-					create_textbox(option_link_id[option_pos]);
-				}
 				
-				instance_destroy();
-			}
-			text_timer = 0;
+			surface_reset_target();
+			instance_destroy();
+			exit;
 		}
 	}
+}
+	
+if (mouse_check_button_released(mb_left))
+{
+	draw_char = text_lenght[page];
 }
 
 //Draw the textbox

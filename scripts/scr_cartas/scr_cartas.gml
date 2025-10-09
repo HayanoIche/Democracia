@@ -58,9 +58,16 @@ global.people = {
 	traficante : {
 		nome : "Líder de Facção",
 		sprite_idle: spr_traficante_parado,
+		sprite_idle_front: spr_traficante_parado_braco,
+		
 		sprite_talk: spr_traficante_fala,
+		sprite_talk_front: spr_traficante_fala_braco,
+		
 		sprite_angry: spr_traficante_bravo,
-		sprite_happy: spr_traficante_feliz
+		sprite_angry_front: spr_traficante_bravo,
+		
+		sprite_happy: spr_traficante_feliz,
+		sprite_happy_front: noone
 	}
 }
 

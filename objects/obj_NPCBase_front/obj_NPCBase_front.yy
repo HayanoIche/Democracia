@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_NPCBase_arm",
+  "%Name":"obj_NPCBase_front",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_NPCBase_arm",
+  "name":"obj_NPCBase_front",
   "overriddenProperties":[],
   "parent":{
     "name":"Gameplay",
