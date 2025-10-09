@@ -39,6 +39,14 @@ global.people = {
 		sprite_happy: spr_reporter_feliz
 	},
 	
+	policial : {
+		nome : "Policial",
+		sprite_idle: spr_policial_parado,
+		sprite_talk: spr_policial_fala,
+		sprite_angry: spr_policial_bravo,
+		sprite_happy: spr_policial_feliz
+	},
+	
 	politico : {
 		nome : "Político",
 		sprite_idle: spr_politico_parado,
@@ -189,8 +197,7 @@ global.cards =
 	},
 	
 	bispo_4: {
-		nome : "Bispo",
-		sprite : "spr_bispo",
+		owner : global.people.bispo,
 		aprovar: "Ordenarei que parem as pesquisas.",
 		aceito: "-15 com ; +5 din ; +10 aprov",
 		negar: "São benéficos para aumentar a produção.",
@@ -200,87 +207,9 @@ global.cards =
 	},
 	
 	bispo_5: {
-		nome : "Bispo",
-		sprite : "spr_bispo",
+		owner : global.people.bispo,
 		aprovar: "Serviremos a Deus.",
 		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_1: {
-		nome : "Senador",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_1: {
-		nome : "Senador",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_1: {
-		nome : "Deputado",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_2: {
-		nome : "Deputado",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_3: {
-		nome : "Deputado",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_4: {
-		nome : "Senador",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; +10 aprov",
-		negar: "A escolha não é dele.",
-		negado: "+10 com ; -5 inf ; -5 aprov",
-		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
-		papel: "Enforçar leis mais rigorosas sobre o Aborto?"
-	},
-	
-	politico_5: {
-		nome : "Senador",
-		sprite : "spr_senador",
-		aprovar: "Serviremos a Deus.",
-		aceito: "-10 com ; -5 inf ; -100 aprov",
 		negar: "A escolha não é dele.",
 		negado: "+10 com ; -5 inf ; -5 aprov",
 		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",

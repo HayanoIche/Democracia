@@ -112,6 +112,17 @@ switch(action_index)
 				action_index = "WAITING SOMEONE";
 			}
 		}
+		else
+		{
+			if (!instance_exists(obj_textbox))
+			{
+				if (!instance_exists(obj_aproved))
+				{
+					instance_create_depth(RESOLUTION_WIDTH/4 - 40, RESOLUTION_HEIGHT/2, depth, obj_aproved);
+					instance_create_depth(RESOLUTION_WIDTH/4 * 3 + 40, RESOLUTION_HEIGHT/2, depth, obj_denided);
+				}
+			}
+		}
 		
 		if (timer > 0)
 		{

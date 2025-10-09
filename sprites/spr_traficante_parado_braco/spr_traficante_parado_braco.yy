@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_traficante_parado",
+  "%Name":"spr_traficante_parado_braco",
   "bboxMode":0,
-  "bbox_bottom":150,
-  "bbox_left":67,
-  "bbox_right":183,
-  "bbox_top":8,
+  "bbox_bottom":194,
+  "bbox_left":15,
+  "bbox_right":143,
+  "bbox_top":73,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -19,9 +19,10 @@
   "height":196,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"b5be139a-dad5-4fa7-a5bd-118b34c473d7","blendMode":0,"displayName":"default","isLocked":false,"name":"b5be139a-dad5-4fa7-a5bd-118b34c473d7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d893e378-19d9-4b29-90dc-a0f9ab1ad712","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"d893e378-19d9-4b29-90dc-a0f9ab1ad712","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b5be139a-dad5-4fa7-a5bd-118b34c473d7","blendMode":0,"displayName":"default","isLocked":false,"name":"b5be139a-dad5-4fa7-a5bd-118b34c473d7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
-  "name":"spr_traficante_parado",
+  "name":"spr_traficante_parado_braco",
   "nineSlice":{
     "$GMNineSliceData":"",
     "bottom":0,
@@ -52,7 +53,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_traficante_parado",
+    "%Name":"spr_traficante_parado_braco",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -76,7 +77,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_traficante_parado",
+    "name":"spr_traficante_parado_braco",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -90,7 +91,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"761aea13-9ea7-41ab-a317-e8a5120aebf0","path":"sprites/spr_traficante_parado/spr_traficante_parado.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"761aea13-9ea7-41ab-a317-e8a5120aebf0","path":"sprites/spr_traficante_parado_braco/spr_traficante_parado_braco.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a8401205-23ea-4077-9780-c947e017f3a3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

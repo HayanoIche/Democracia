@@ -9,25 +9,42 @@ if (keyboard_check_pressed(ord("D")))
 	deny_request(self);
 }
 
+var _sprite = idle_sprite;
+
 if (keyboard_check(vk_shift)) {
-	sprite_index = happy_sprite;
+	_sprite = happy_sprite;
 }
+
+_sprite = idle_sprite;
 
 if (instance_exists(obj_textbox)) {
 	if (obj_textbox.draw_char < obj_textbox.text_lenght[obj_textbox.page]) {
-		sprite_index = talk_sprite;
-	}
-	else
-	{
-		sprite_index = idle_sprite;
+		_sprite = talk_sprite;
 	}
 }
 else
 {
-	sprite_index = idle_sprite;
+	if (instance_exists(obj_aproved)) {
+		if (obj_aproved.selected) {
+			_sprite = happy_sprite;
+			
+			x = smooth_approach(x, RESOLUTION_WIDTH/2 - 40, 0.5);
+		}
+	}
 }
 
-draw_sprite_ext(sprite_index, image_index, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+if (_sprite == idle_sprite) {
+	x = smooth_approach(x, RESOLUTION_WIDTH/2, 0.1);
+}
+
+sprite_index = _sprite;
+
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+if (_sprite == happy_sprite) {
+	draw_sprite_ext(spr_shine, 0, x - 60, y + 40, 2, 2, 0, c_white, 1);
+	draw_sprite_ext(spr_shine, 0, x + 60, y + 80, 2, 2, 0, c_white, 1);
+}
 
 /*
 // Desenhar UI fodidinha
