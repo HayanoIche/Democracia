@@ -1,7 +1,7 @@
 global.people = {
 	ativista : {
 		name : "Ativista",
-		sprite_idle: noone,
+		sprite_idle: spr_ativista_parada,
 		sprite_idle_front: spr_ativista_parada,
 		
 		sprite_talk: noone,
@@ -17,17 +17,31 @@ global.people = {
 	banqueiro : {
 		name : "Banqueiro",
 		sprite_idle: spr_banqueiro_parado,
-		sprite_talk: spr_banqueiro_parado,
-		sprite_angry: spr_banqueiro_bravo,
-		sprite_happy: spr_banqueiro_feliz
+		sprite_idle_front: spr_banqueiro_parado,
+		
+		sprite_talk: noone,
+		sprite_talk_front: spr_banqueiro_fala,
+		
+		sprite_angry: noone,
+		sprite_angry_front: spr_banqueiro_bravo,
+		
+		sprite_happy: noone,
+		sprite_happy_front: spr_banqueiro_feliz 
 	},
 	
 	bispo : {
 		name : "Bispo",
 		sprite_idle: spr_bispo_parado,
-		sprite_talk: spr_bispo_parado,
+		sprite_idle_front: noone,
+		
+		sprite_talk: spr_bispo_fala,
+		sprite_talk_front: noone,
+		
 		sprite_angry: spr_bispo_bravo,
-		sprite_happy: spr_bispo_feliz
+		sprite_angry_front: noone,
+		
+		sprite_happy: spr_bispo_feliz,
+		sprite_happy_front: noone
 	},
 	
 	ministro : {
@@ -40,8 +54,8 @@ global.people = {
 	
 	reporter : {
 		name : "Reporter",
-		sprite_idle: spr_reporter_parada,
-		sprite_talk: spr_reporter_fala,
+		sprite_idle: spr_reporter_fala,
+		sprite_talk: spr_reporter_parada,
 		sprite_angry: spr_reporter_brava,
 		sprite_happy: spr_reporter_feliz
 	},

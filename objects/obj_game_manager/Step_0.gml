@@ -14,6 +14,7 @@ if (font_add_get_enable_aa())
 if (started == false) {exit};
 
 if (day_is_over())
+&& (action_index != "NIGHT")
 {
 	action_index = "DAY END";
 }
@@ -47,7 +48,7 @@ switch(action_index)
 		|| abs(global.clock.time_current - global.persons.fifth.time) < 1
 		{
 			action_index = "CHARACTER INTERACTION";
-			clock_stop();
+			clock_pause();
 			
 			timer = 60*5;
 		}
@@ -159,15 +160,26 @@ switch(action_index)
 			}
 		}
 		break; }
-	
+			
 	case "NIGHT": {
-			
-			if (mouse_check_button_pressed(mb_left))
+			if (day_stat_buff < 3)
 			{
-				day_stat_buff += 1;
+				if (mouse_check_button_pressed(mb_left))
+				{
+					day_stat_buff += 1;
+				}
 			}
-			
-			
+			else
+			{
+				if (mouse_check_button_pressed(mb_left))
+				{
+					clock_reset();
+					timer = 0;
+					day_stat_buff = 0;
+					day_end_y_buff = 0;
+					action_index = "DAY CHANGING";
+				}
+			}
 		break; }
 }
 

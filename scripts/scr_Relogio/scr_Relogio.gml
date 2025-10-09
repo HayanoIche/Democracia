@@ -28,12 +28,17 @@ function clock_start() {
     day_started();
 }
 
+function clock_pause() {
+    if (!variable_global_exists("clock")) return;
+    
+    global.clock.is_running = false;
+}
 
 function clock_stop() {
     if (!variable_global_exists("clock")) return;
     
     global.clock.is_running = false;
-    day_ended(); 
+    day_ended();
 }
 
 // Função de update do relógio

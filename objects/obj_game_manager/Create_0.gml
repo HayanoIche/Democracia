@@ -84,7 +84,10 @@ change_day_cutscene = function()
 			else
 			{
 				action_index = "WAITING SOMEONE";
-				clock_start()
+				day_text_timer = 0;
+				day_background_alpha = 0;
+				day_changed = false;
+				clock_start();
 			}
 		}
 	}
