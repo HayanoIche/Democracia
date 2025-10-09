@@ -169,38 +169,6 @@ if (mouse_check_button_released(mb_left))
 	draw_char = text_lenght[page];
 }
 
-//Draw the textbox
-var _txtb_x = textbox_x + textbox_x_offset[page];
-var _txtb_y = textbox_y;
-txtb_spr_w = sprite_get_width(txtb_spr[page]);
-txtb_spr_h = sprite_get_height(txtb_spr[page]);
-
-//back of the textbox
-draw_sprite_ext(textbox_spr, 0, _txtb_x, _txtb_y, textbox_width/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_gray, 1);
-
-//draw the speaker
-if (speaker_sprite[page] != noone)
-{ 
-	sprite_index = speaker_sprite[page];
-	if draw_char == text_lenght[page] {image_index = 0;}
-	var _speaker_x = textbox_x + portrait_x_offset[page];
-	
-	draw_sprite_ext(sprite_index, image_index, _speaker_x + 4, textbox_y + 4, 0.5, 0.5, 0, c_white, 1);
-	
-	if (speaker_name[page] != noone)
-	{
-		draw_text(_speaker_x + 3, textbox_y - (string_height(speaker_name[page]) + 2), speaker_name[page])
-	}
-}
-else
-{
-	if (speaker_name[page] != noone)
-	{
-		var _name_x = textbox_x + textbox_x_offset[page];
-		draw_text(_name_x + 3, textbox_y - (string_height(speaker_name[page]) + 2), speaker_name[page])
-	}
-}
-
 //draw the text
 for(var _c = 0; _c < draw_char; _c++)
 {
@@ -243,4 +211,9 @@ for(var _c = 0; _c < draw_char; _c++)
 
 surface_reset_target();
 
-draw_surface_ext(surface, 480, 150, 1, 1, 0, c_white, 1);
+draw_sprite_ext(spr_textbox, 0, 480, 140, 2, 2, 0, c_white, 1);
+
+draw_surface_ext(surface, 480, 140, 1, 1, 0, c_white, 1);
+
+draw_set_font(global.font);
+draw_text(480, 120, string(obj_NPC.name));

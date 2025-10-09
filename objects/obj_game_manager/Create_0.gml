@@ -90,4 +90,4 @@ change_day_cutscene = function()
 	}
 }
 
-depth = -9000;
+depth = -9500;

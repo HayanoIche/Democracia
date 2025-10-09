@@ -51,7 +51,7 @@ function bring_new_person() {
     }
     
     // Criar novo NPC
-    var new_npc = instance_create_depth(750, 350, 0, obj_NPCBase);
+    var new_npc = instance_create_depth(750, 350, 0, obj_NPC);
     
     // coloca as infos dos cards no OBJ_Newnpc
     new_npc.sprite_index = selected_card.owner.sprite_idle;
@@ -65,7 +65,9 @@ function bring_new_person() {
 	new_npc.front_happy_sprite = selected_card.owner.sprite_happy_front;
 	new_npc.front_angry_sprite = selected_card.owner.sprite_angry_front;
 	
-    new_npc.request_text = selected_card.fala;
+	new_npc.name = selected_card.owner.name;
+    
+	new_npc.request_text = selected_card.fala;
     new_npc.papel = selected_card.papel;
     new_npc.aprovar = selected_card.aprovar;
     new_npc.negar = selected_card.negar;

@@ -5,7 +5,7 @@ if (obj_mouse.x < x + x/2)
 	
 	if (mouse_check_button_pressed(mb_left))
 	{
-		approve_request(obj_NPCBase);
+		approve_request(obj_NPC);
 	}
 }
 else

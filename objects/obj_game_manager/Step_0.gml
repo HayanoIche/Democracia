@@ -47,8 +47,9 @@ switch(action_index)
 		|| abs(global.clock.time_current - global.persons.fifth.time) < 1
 		{
 			action_index = "CHARACTER INTERACTION";
+			clock_stop();
+			
 			timer = 60*5;
-			show_debug_message(clock_get_time_string());
 		}
 		
 		break; }
@@ -70,7 +71,7 @@ switch(action_index)
 			{
 				day_background_alpha -= 1/60;
 				
-				if (!instance_exists(obj_NPCBase)) {
+				if (!instance_exists(obj_NPC)) {
 					current_npc = bring_new_person();
 					npc_count += 1;
 				}
@@ -80,6 +81,7 @@ switch(action_index)
 		if (timer <= 0)
 		{
 			action_index = "APPOINTMENT";
+			clock_start();
 			timer = 60*2;
 		}
 		
@@ -90,7 +92,7 @@ switch(action_index)
 		break; }
 		
 	case "APPOINTMENT": {
-		if (!instance_exists(obj_NPCBase))
+		if (!instance_exists(obj_NPC))
 		{
 			if (timer <= 60*2) && (timer > 60*1)
 			{

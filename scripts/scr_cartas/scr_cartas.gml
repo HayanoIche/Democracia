@@ -1,14 +1,21 @@
 global.people = {
 	ativista : {
-		nome : "Ativista",
-		sprite_idle: spr_ativista_parada,
-		sprite_talk: spr_ativista_fala,
-		sprite_angry: spr_ativista_brava,
-		sprite_happy: spr_ativista_feliz
+		name : "Ativista",
+		sprite_idle: noone,
+		sprite_idle_front: spr_ativista_parada,
+		
+		sprite_talk: noone,
+		sprite_talk_front: spr_ativista_fala,
+		
+		sprite_angry: noone,
+		sprite_angry_front: spr_ativista_brava,
+		
+		sprite_happy: noone,
+		sprite_happy_front: spr_ativista_feliz
 	},
 	
 	banqueiro : {
-		nome : "Banqueiro",
+		name : "Banqueiro",
 		sprite_idle: spr_banqueiro_parado,
 		sprite_talk: spr_banqueiro_parado,
 		sprite_angry: spr_banqueiro_bravo,
@@ -16,7 +23,7 @@ global.people = {
 	},
 	
 	bispo : {
-		nome : "Bispo",
+		name : "Bispo",
 		sprite_idle: spr_bispo_parado,
 		sprite_talk: spr_bispo_parado,
 		sprite_angry: spr_bispo_bravo,
@@ -24,7 +31,7 @@ global.people = {
 	},
 	
 	ministro : {
-		nome : "Ministro",
+		name : "Ministro",
 		sprite_idle: spr_ministro_parado,
 		sprite_talk: spr_ministro_parado,
 		sprite_angry: spr_ministro_bravo,
@@ -32,7 +39,7 @@ global.people = {
 	},
 	
 	reporter : {
-		nome : "Reporter",
+		name : "Reporter",
 		sprite_idle: spr_reporter_parada,
 		sprite_talk: spr_reporter_fala,
 		sprite_angry: spr_reporter_brava,
@@ -40,7 +47,7 @@ global.people = {
 	},
 	
 	policial : {
-		nome : "Policial",
+		name : "Policial",
 		sprite_idle: spr_policial_parado,
 		sprite_talk: spr_policial_fala,
 		sprite_angry: spr_policial_bravo,
@@ -48,7 +55,7 @@ global.people = {
 	},
 	
 	politico : {
-		nome : "Político",
+		name : "Político",
 		sprite_idle: spr_politico_parado,
 		sprite_talk: spr_politico_fala,
 		sprite_angry: spr_politico_bravo,
@@ -56,14 +63,14 @@ global.people = {
 	},
 	
 	traficante : {
-		nome : "Líder de Facção",
+		name : "Líder de Facção",
 		sprite_idle: spr_traficante_parado,
-		sprite_idle_front: spr_traficante_parado_braco,
+		sprite_idle_front: spr_traficante_parado_frente,
 		
 		sprite_talk: spr_traficante_fala,
 		sprite_talk_front: spr_traficante_fala_braco,
 		
-		sprite_angry: spr_traficante_bravo,
+		sprite_angry: noone,
 		sprite_angry_front: spr_traficante_bravo,
 		
 		sprite_happy: spr_traficante_feliz,

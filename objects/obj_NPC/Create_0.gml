@@ -1,4 +1,6 @@
 // Essas coisa são necessárias pra dps, apaga não favorzin - BAGOS
+name = "";
+
 request_text = "";
 papel = ""; // Isso é oq na teoria estaria escrito no papel q é levantado na cara do player
 aprovar = "";
@@ -22,7 +24,7 @@ depth = -8500;
 
 alarm[0] = 30;
 
-instance_create_depth(x, y, depth, obj_NPCBase_front);
+instance_create_depth(x, y, depth, obj_NPC_front);
 
 x = RESOLUTION_WIDTH/2;
 y = 80;
