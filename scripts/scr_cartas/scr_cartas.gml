@@ -1,18 +1,34 @@
 global.people = {
+	ativista : {
+		nome : "Ativista",
+		sprite_idle: spr_ativista_parada,
+		sprite_talk: spr_ativista_fala,
+		sprite_angry: spr_ativista_brava,
+		sprite_happy: spr_ativista_feliz
+	},
+	
+	banqueiro : {
+		nome : "Banqueiro",
+		sprite_idle: spr_banqueiro_parado,
+		sprite_talk: spr_banqueiro_parado,
+		sprite_angry: spr_banqueiro_bravo,
+		sprite_happy: spr_banqueiro_feliz
+	},
+	
 	bispo : {
 		nome : "Bispo",
-		sprite_idle: spr_ministro_parado,
-		sprite_talk: spr_ministro_parado,
+		sprite_idle: spr_bispo_parado,
+		sprite_talk: spr_bispo_parado,
 		sprite_angry: spr_bispo_bravo,
 		sprite_happy: spr_bispo_feliz
 	},
 	
-	traficante : {
-		nome : "Líder de Facção",
-		sprite_idle: spr_bispo_parado,
-		sprite_talk: spr_bispo_fala,
-		sprite_angry: spr_bispo_bravo,
-		sprite_happy: spr_bispo_feliz
+	ministro : {
+		nome : "Ministro",
+		sprite_idle: spr_ministro_parado,
+		sprite_talk: spr_ministro_parado,
+		sprite_angry: spr_ministro_bravo,
+		sprite_happy: spr_ministro_feliz
 	},
 	
 	reporter : {
@@ -21,11 +37,27 @@ global.people = {
 		sprite_talk: spr_reporter_fala,
 		sprite_angry: spr_reporter_brava,
 		sprite_happy: spr_reporter_feliz
+	},
+	
+	politico : {
+		nome : "Político",
+		sprite_idle: spr_politico_parado,
+		sprite_talk: spr_politico_fala,
+		sprite_angry: spr_politico_bravo,
+		sprite_happy: spr_politico_feliz
+	},
+	
+	traficante : {
+		nome : "Líder de Facção",
+		sprite_idle: spr_traficante_parado,
+		sprite_talk: spr_traficante_fala,
+		sprite_angry: spr_traficante_bravo,
+		sprite_happy: spr_traficante_feliz
 	}
 }
 
-global.cards = {
-	
+global.cards =
+{
 	faccao_1 : {
 		owner : global.people.traficante,
 		aprovar: "Vou mudar as rotas de patrulha hoje.",

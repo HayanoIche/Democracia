@@ -63,15 +63,35 @@ else
 
 if (keyboard_check(vk_numpad0))
 {
-	draw_sprite_ext(global.people.bispo.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+	draw_sprite_ext(global.people.ativista.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
 }
 
 if (keyboard_check(vk_numpad1))
 {
-	draw_sprite_ext(global.people.reporter.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+	draw_sprite_ext(global.people.banqueiro.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
 }
 
 if (keyboard_check(vk_numpad2))
+{
+	draw_sprite_ext(global.people.bispo.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}
+
+if (keyboard_check(vk_numpad3))
+{
+	draw_sprite_ext(global.people.ministro.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}
+
+if (keyboard_check(vk_numpad4))
+{
+	draw_sprite_ext(global.people.reporter.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}
+
+if (keyboard_check(vk_numpad5))
+{
+	draw_sprite_ext(global.people.politico.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+}
+
+if (keyboard_check(vk_numpad6))
 {
 	draw_sprite_ext(global.people.traficante.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
 }
