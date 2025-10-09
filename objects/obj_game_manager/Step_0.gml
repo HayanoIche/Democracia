@@ -13,8 +13,9 @@ if (font_add_get_enable_aa())
 
 if (started == false) {exit};
 
-if (is_day_over()) {
-	finalizar_dia()	
+if (day_is_over())
+{
+	action_index = "DAY END";
 }
 
 switch(action_index)
@@ -33,7 +34,6 @@ switch(action_index)
 			
 		break; }
 	
-	// "Cutscen e de trocar de dia
 	case "DAY CHANGING": {
 			change_day_cutscene();
 		break; }
@@ -132,71 +132,46 @@ switch(action_index)
 		}
 		
 		break; }
+		
+	case "DAY END": {
+		if (day_background_alpha < 1)
+		{
+			day_background_alpha += 0.005;
+			timer = 0;
+		}
+		else
+		{
+			if (day_end_y_buff < 150)
+			{
+				if (timer < 120)
+				{
+					timer += 1;
+				}
+				else
+				{
+					day_end_y_buff = smooth_approach(day_end_y_buff, 160, 0.030);
+				}
+			}
+			else
+			{
+				action_index = "NIGHT";
+				timer = 0;
+			}
+		}
+		break; }
+	
+	case "NIGHT": {
+			
+			if (mouse_check_button_pressed(mb_left))
+			{
+				day_stat_buff += 1;
+			}
+			
+			
+		break; }
 }
 
-function finalizar_dia() {
-		show_message("O dia acabou ou pq vc ficou sem tempo, ou pq acabaram as pessoas :)")
-}
-
-function resource_check() {
-    var resources = global.resources;
-    var keys = variable_struct_get_names(resources);
-    
-    for (var i = 0; i < array_length(keys); i++) {
-        var resource_name = keys[i];
-        var resource_value = variable_struct_get(resources, resource_name);
-        
-        // Checa falha (<= 0)
-        if (resource_value <= 0) {
-            resource_failure(resource_name);
-        }
-        // Checa vitoria entre aspsas (>= 100)
-        else if (resource_value >= 100) {
-            resource_overachieve(resource_name);
-        }
-    }
-}
-
-function resource_failure(resource_name) {
-    switch (resource_name) {
-        case "comida":
-            show_message("FAILURE: Você ficou sem comida! Seus cidadões estão passando fome!");
-            break;
-			
-        case "aprovacao":
-            show_message("FAILURE: Taxa de aprovação muito baixa! Impeachment!");
-            break;
-			
-        case "dinheiro":
-            show_message("FAILURE: Crise finânceira!");
-            break;
-			
-        case "infraestrutura":
-            show_message("FAILURE: Infraestrutura colapsou!");
-            break;
-			
-        default:
-            show_message("Não era pra isso aparecer || ERRO NO SISTEMA DE MOSTRAR FALHAS");
-            break;
-    }
-}
-
-function resource_overachieve(resource_name) {
-    switch (resource_name) {
-        case "comida":
-            show_message("OVERACHIEVE: Você tem muita comida! A elite se voltou contra você!");
-            break;
-        case "aprovacao":
-            show_message("OVERACHIEVE: Aprovação máxima! Você virou um ditador!");
-            break;
-        case "dinheiro":
-            show_message("OVERACHIEVE: Abundância de dinheiro, a economia colapsou!");
-            break;
-        case "infraestrutura":
-            show_message("OVERACHIEVE: Infraestrutura alta, os militares se viraram contra você!");
-            break;
-        default:
-            show_message("Não era pra isso aparecer || ERRO NO SISTEMA DE MOSTRAR OVERACHIEVE sla");
-            break;
-    }
+if (keyboard_check_pressed(vk_delete))
+{
+	global.clock.time_current += 100;
 }

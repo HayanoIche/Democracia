@@ -170,7 +170,7 @@ function day_ended() {
 }
 
 // Retorna true se o dia acabou, false se não
-function is_day_over() {
+function day_is_over() {
     if (!variable_global_exists("clock")) return false;
     
     if (global.clock.time_current >= global.clock.day_end) {

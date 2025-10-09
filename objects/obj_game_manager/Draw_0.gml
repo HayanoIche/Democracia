@@ -1,8 +1,6 @@
 /// @description
 if (started == false) {exit};
 
-
-
 if (action_index == "TUTORIAL")
 || (action_index == "DAY CHANGING")
 {
@@ -31,11 +29,6 @@ if (action_index == "DAY CHANGING")
 }
 else
 {
-	draw_set_color(c_black);
-	draw_set_alpha(day_background_alpha);
-	draw_rectangle(0, 0, room_width, room_height, false);
-	draw_set_alpha(c_white);
-	
 	var _clock_x = 680;
 	var _clock_y = 15;
 	
@@ -45,35 +38,40 @@ else
 	draw_text_transformed(_clock_x, _clock_y, clock_get_time_string(), 2, 2, 0);
 	
 	draw_set_colour(c_lime);
-
+	
 	var _xx = 10;
 	var _yy = 20;
-
+	
 	var _sep = 40;
-
+	
 	draw_text(_xx, _yy, "Dinheiro: " + string(global.resources.dinheiro));
 	draw_text(_xx, _yy + _sep, "Comida: " + string(global.resources.comida));
 	draw_text(_xx, _yy + _sep * 2, "Aprovacao: " + string(global.resources.aprovacao));
 	draw_text(_xx, _yy + _sep * 3, "Infraestrutura: " + string(global.resources.infraestrutura));
+	
+	draw_set_color(c_black);
+	draw_set_alpha(day_background_alpha);
+	draw_rectangle(0, 0, room_width, room_height, false);
+	draw_set_alpha(c_white);
 
 	draw_set_color(c_white);
-
 }
 
-
-if (keyboard_check(vk_numpad0))
+if (action_index == "DAY END")
+|| (action_index == "NIGHT")
 {
-	draw_sprite_ext(global.people.ativista.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
+	if (day_background_alpha >= 1)
+	{
+		var _de_txt = "O DIA ACABOU!";
+		draw_text_transformed(RESOLUTION_WIDTH/2 - string_width(_de_txt), RESOLUTION_HEIGHT/2 - string_height(_de_txt) - day_end_y_buff, _de_txt, 2, 2, 0);
+	}
+	
+	if (day_end_y_buff > 150)
+	{
+		draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 200, "GOON: + 1000", 2, 2, 0);
+		
+		if (day_stat_buff > 0) {
+			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 200, "GOON: + 1000", 2, 2, 0);
+		}
+	}
 }
-
-if (keyboard_check(vk_numpad1))
-{
-	draw_sprite_ext(global.people.banqueiro.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1);
-}
-
-if (keyboard_check(vk_numpad2)) {draw_sprite_ext(global.people.bispo.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1)};
-if (keyboard_check(vk_numpad3)) {draw_sprite_ext(global.people.ministro.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1)};
-if (keyboard_check(vk_numpad4)) {draw_sprite_ext(global.people.reporter.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1)};
-if (keyboard_check(vk_numpad5)) {draw_sprite_ext(global.people.politico.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1)};
-if (keyboard_check(vk_numpad6)) {draw_sprite_ext(global.people.traficante.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1)};
-if (keyboard_check(vk_numpad7)) {draw_sprite_ext(global.people.policial.sprite_idle, 0, RESOLUTION_WIDTH/2, 80, 2, 2, 0, c_white, 1)};
