@@ -18,6 +18,8 @@ front_angry_sprite = undefined;
 
 front_sprite_index = undefined;
 
+audio = undefined;
+
 state = "";
 
 depth = -8500;

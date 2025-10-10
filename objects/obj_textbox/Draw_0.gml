@@ -124,7 +124,7 @@ if (text_pause_timer <= 0)
 				
 				if (_check_char != "(" && _check_char != ")" && _check_char != "[" && _check_char != "]")
 				{
-					audio_play_sound(snd_menu_move[page], 8, false);
+					//audio_play_sound(snd_menu_move[page], 8, false);
 					//audio_sound_gain(snd_menu_move[page], global.sfx_volume * global.master_volume, 0);
 				}
 			}

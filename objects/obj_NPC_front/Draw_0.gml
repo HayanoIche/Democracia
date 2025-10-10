@@ -1,15 +1,15 @@
 /// @description
-
-if (sprite_exists(obj_NPC.front_sprite_index))
+if (sprite_exists(sprite_index))
 {
-	draw_sprite_ext(obj_NPC.front_sprite_index,
-		obj_NPC.image_index,
+	draw_sprite_ext(sprite_index,
+		image_index,
 		obj_NPC.x,
 		obj_NPC.y,
-		obj_NPC.image_xscale,
-		obj_NPC.image_yscale,
-		obj_NPC.image_angle,
-		obj_NPC.image_blend,
-		obj_NPC.image_alpha
-	)
+		image_xscale,
+		image_yscale,
+		image_angle,
+		image_blend,
+		image_alpha
+	);
 }
+

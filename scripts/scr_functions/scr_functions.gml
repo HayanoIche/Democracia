@@ -67,6 +67,8 @@ function bring_new_person() {
 	
 	new_npc.name = selected_card.owner.name;
     
+	new_npc.audio = selected_card.audio;
+	
 	new_npc.request_text = selected_card.fala;
     new_npc.papel = selected_card.papel;
     new_npc.aprovar = selected_card.aprovar;
