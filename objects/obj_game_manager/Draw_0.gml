@@ -68,23 +68,38 @@ if (action_index == "DAY END")
 	
 	if (day_end_y_buff > 150)
 	{
-		draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 180, "GOON: + 1000", 2, 2, 0);
+		var _stat_txt = "DINHEIRO: ";
+		if (start_dinheiro - global.resources.dinheiro < 0) { _stat_txt += "+ " } else { _stat_txt += "- " };
+		_stat_txt += string(abs(start_dinheiro - global.resources.dinheiro));
+		
+		draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 180, _stat_txt, 2, 2, 0);
 		
 		if (day_stat_buff > 0) {
-			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 220, "AURA: - 500", 2, 2, 0);
+			_stat_txt = "COMIDA: ";
+			if (start_comida - global.resources.comida < 0) { _stat_txt += "+ " } else { _stat_txt += "- " };
+			_stat_txt += string(abs(start_comida - global.resources.comida));
+		
+			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 220, _stat_txt, 2, 2, 0);
 		}
 		
 		if (day_stat_buff > 1) {
-			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 260, "EGO: + 69", 2, 2, 0);
+			_stat_txt = "APROVAÇÃO: ";
+			if (start_aprovacao - global.resources.aprovacao < 0) { _stat_txt += "+ " } else { _stat_txt += "- " };
+			_stat_txt += string(abs(start_aprovacao - global.resources.aprovacao));
+			
+			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 260, _stat_txt, 2, 2, 0);
 		}
 		
 		if (day_stat_buff > 2) {
-			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 300, "MOLESTAGEM: + 22", 2, 2, 0);
+			_stat_txt = "INFRAESTRUTURA: ";
+			if (start_infraestrutura - global.resources.infraestrutura < 0) { _stat_txt += "+ " } else { _stat_txt += "- " };
+			_stat_txt += string(abs(start_infraestrutura - global.resources.infraestrutura));
+			
+			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 300, _stat_txt, 2, 2, 0);
 		}
 		
-		if (day_stat_buff > 3) {
-			draw_text_transformed(RESOLUTION_WIDTH/2 - 100, 300, "[clique pra avançar]", 2, 2, 0);
-		}
+		var _txt = "[clique pra avançar]";
+		draw_text_transformed(RESOLUTION_WIDTH/2 - string_width(_txt), 390, _txt, 2, 2, 0);
 	}
 }
 

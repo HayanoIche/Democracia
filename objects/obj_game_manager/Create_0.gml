@@ -35,6 +35,11 @@ current_npc = noone;
 
 instance_create_depth(0, 0, depth - 4, obj_clock);
 
+start_dinheiro = 0;
+start_aprovacao = 0;
+start_infraestrutura = 0;
+start_comida = 0;
+
 change_day_cutscene = function()
 {
 	// Começando a animação de trocar de dia
@@ -87,6 +92,12 @@ change_day_cutscene = function()
 				day_text_timer = 0;
 				day_background_alpha = 0;
 				day_changed = false;
+				
+				start_dinheiro = global.resources.dinheiro;
+				start_aprovacao = global.resources.aprovacao;
+				start_infraestrutura = global.resources.infraestrutura;
+				start_comida = global.resources.comida;
+				
 				clock_start();
 			}
 		}
