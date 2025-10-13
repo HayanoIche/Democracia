@@ -12,8 +12,8 @@
   "duration":1.942313,
   "name":"snd_door_knock",
   "parent":{
-    "name":"Audio",
-    "path":"folders/Audio.yy",
+    "name":"Audios",
+    "path":"folders/Audios.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -2,7 +2,7 @@
 textbox_x = 0;
 textbox_y = 0;
 textbox_width = 300;
-textbox_height = 110;
+textbox_height = 210;
 textbox_spr = spr_textbox;
 
 textbox_x_offset = 0;

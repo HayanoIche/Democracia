@@ -32,22 +32,58 @@ else
 	var _clock_x = 680;
 	var _clock_y = 15;
 	
+	draw_sprite(spr_clock, 0, _clock_x - 18, _clock_y - 2)
+	
 	draw_set_colour(c_black);
 	draw_text_transformed(_clock_x + 2, _clock_y + 2, clock_get_time_string(), 2, 2, 0);
 	draw_set_colour(c_white);
 	draw_text_transformed(_clock_x, _clock_y, clock_get_time_string(), 2, 2, 0);
 	
-	draw_set_colour(c_lime);
 	
-	var _xx = 10;
+	var _xx = 50;
 	var _yy = 20;
 	
 	var _sep = 40;
 	
-	draw_text(_xx, _yy, "Dinheiro: " + string(global.resources.dinheiro));
-	draw_text(_xx, _yy + _sep, "Comida: " + string(global.resources.comida));
-	draw_text(_xx, _yy + _sep * 2, "Aprovacao: " + string(global.resources.aprovacao));
-	draw_text(_xx, _yy + _sep * 3, "Infraestrutura: " + string(global.resources.infraestrutura));
+	draw_set_colour(c_white);
+	draw_set_font(global.font);
+	
+	var _col = c_black;
+	
+	
+	// Dinheiro
+	draw_sprite(spr_bar, 0, _xx - 45, _yy - 6);
+	
+	draw_sprite_ext(spr_icons, 0, _xx - 35 + 1, _yy - 3 + 1, 1, 1, 0, _col, 1);
+	draw_sprite(spr_icons, 0, _xx - 35, _yy - 3);
+	
+	draw_text_color(_xx + 6, _yy + 4, "Dinheiro: " + string(global.resources.dinheiro), _col, _col, _col, _col, 1);
+	draw_text(_xx + 5, _yy + 3, "Dinheiro: " + string(global.resources.dinheiro));
+	
+	// Comida
+	draw_sprite(spr_bar, 0, _xx - 45, _yy - 6 + _sep);
+	
+	draw_sprite_ext(spr_icons, 1, _xx - 35 + 1, _yy - 3 + _sep + 1, 1, 1, 0, _col, 1);
+	draw_sprite(spr_icons, 1, _xx - 35, _yy - 3 + _sep);
+	
+	draw_text_color(_xx + 6, _yy + 4 + _sep, "Comida: " + string(global.resources.comida), _col, _col, _col, _col, 1);
+	draw_text(_xx + 5, _yy + 3 + _sep, "Comida: " + string(global.resources.comida));
+	
+	// Aprovação
+	draw_sprite(spr_bar, 0, _xx - 45, _yy - 6 + _sep + _sep);
+	
+	draw_sprite_ext(spr_icons, 2, _xx - 35 + 1, _yy - 3 + _sep + _sep + 1, 1, 1, 0, _col, 1);
+	draw_sprite(spr_icons, 2, _xx - 35, _yy - 3 + _sep + _sep);
+	
+	draw_text(_xx + 5, _yy + 3 + _sep * 2, "Aprovacao: " + string(global.resources.aprovacao));
+	
+	// Infraestrutura
+	draw_sprite(spr_bar, 0, _xx - 45, _yy - 6 + _sep + _sep + _sep);
+	
+	draw_sprite_ext(spr_icons, 3, _xx - 35 + 1, _yy - 3 + _sep + _sep + _sep + 1, 1, 1, 0, _col, 1);
+	draw_sprite(spr_icons, 3, _xx - 35, _yy - 3 + _sep + _sep + _sep);
+	
+	draw_text(_xx + 5, _yy + 3 + _sep * 3, "Infraestrutura: " + string(global.resources.infraestrutura));
 	
 	draw_set_color(c_black);
 	draw_set_alpha(day_background_alpha);

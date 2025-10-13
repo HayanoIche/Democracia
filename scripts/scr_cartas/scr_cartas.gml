@@ -122,6 +122,7 @@ global.people = {
 		sprite_happy_front: noone
 	}
 }
+
 global.cards =
 {
 	faccao_1 : {
@@ -132,18 +133,18 @@ global.cards =
 		negado: "-10 Din ; +5 Inf",
 		fala: "Precisamo ensina uma lição pra um X9 mas com os homem andando no morro não tem como. Ajuda aí que sobra um arrego pra você.",
 		papel: "Mudar as rotas de patrulha da polícia?",
-		audio: snd_policial_1
+		audio: snd_traficante_1
 	},
 	
 	faccao_2 : {
 		owner : global.people.traficante,
-		aprovar: "O morador não merece passar po	r isso.",
+		aprovar: "O morador não merece passar por isso.",
 		aceito: "-10 Din ; +10 inf",
 		negar: "Não negocio com terroristas.",
 		negado: "+10 Din ; -10 Inf",
 		fala: "Tamo organizando um ataque as empresas de ônibus... Me paga um arrego que eu falo pros moleque recuar.",
 		papel: "Pagar a propina?",
-		audio: snd_policial_1
+		audio: snd_traficante_2
 	},
 	
 	faccao_3 : {
@@ -154,7 +155,7 @@ global.cards =
 		negado: "-5 Din ; +5 Inf; +5 aprov",
 		fala: "Meus aliado nos estates tão enviando as peça pelo porto, finge que você não viu nada e vai sobrar um pouco pra você também.",
 		papel: "Aprovar a entrada de contrabando?",
-		audio: snd_policial_1
+		audio: snd_traficante_3
 	},
 	
 	faccao_4 : {
@@ -165,7 +166,7 @@ global.cards =
 		negado: "-10 Din ; +15 Inf",
 		fala: "O deputado Fortunato tá no nosso bolso. Desenrola pra nois ai que eu garanto que você vai se reeleger ano que vem.",
 		papel: "Investigar o deputado Fortunato?",
-		audio: snd_policial_1
+		audio: snd_traficante_4
 	},
 	
 	faccao_5 : {
@@ -176,7 +177,7 @@ global.cards =
 		negado: "+10 Inf; -10 com ; -5 aprov",
 		fala: "Doutô os homem tão apertando, alivia ai que nois investe na comunidade e deixa os caminhão de comida passar.",
 		papel: "Aliviar policiamento no tráfico?",
-		audio: snd_policial_1
+		audio: snd_traficante_5
 	},
 	
 	faccao_6 : {
@@ -187,7 +188,7 @@ global.cards =
 		negado: "-15 Din ; +10 Inf ; +5 aprov",
 		fala: "Tamo organizando um roubo a uma carga na Bahia, mas a gente precisa saber a rota dos caminhão. Aceita um arrego em troca das rota?",
 		papel: "Revelar a rota dos caminhões?",
-		audio: snd_policial_1
+		audio: snd_traficante_6
 	},
 	
 	faccao_7 : {
@@ -198,7 +199,7 @@ global.cards =
 		negado: "-10 din ; +10 aprov ; +5 inf",
 		fala: "Tira os ganso da rota e coloca minha rapaziada na contenção. A cidade fica segura do meu jeito...",
 		papel: "Fazer a polícia recuar?",
-		audio: snd_policial_1
+		audio: snd_traficante_7
 	},
 	
 	faccao_8 : {
@@ -209,7 +210,7 @@ global.cards =
 		negado: "-10 Din ; +15 aprov",
 		fala: "A operação no Tanque deu errado, e os moleque quer vingança. Me paga um arrego que eu acalmo eles.",
 		papel: "Acalmar os criminosos?",
-		audio: snd_policial_1
+		audio: snd_traficante_8
 	},
 	
 	faccao_9 : {
@@ -220,7 +221,7 @@ global.cards =
 		negado: "+10 Din ; -5 Inf ;  -10 com",
 		fala: "Doutô, os morador tem que comer, o caminhão não consegue subir o morro.",
 		papel: "Liberar o caminho?",
-		audio: snd_policial_1
+		audio: snd_traficante_9
 	},
 	
 	faccao_10 : {
@@ -231,7 +232,7 @@ global.cards =
 		negado: "+10 din ; -5 inf ; -5 aprov",
 		fala: "A milícia do Rocha tá querendo tomar nosso território. Me apoia que eu garanto uns votos pra você.",
 		papel: "Realocar fundos para impedir a guerra entre facções?",
-		audio: snd_policial_1
+		audio: snd_traficante_10
 	},
 	
 	bispo_1: {
@@ -242,7 +243,7 @@ global.cards =
 		negado: "+15 inf ; -5 din ; -5 aprov",
 		fala: "Essa inteligência artificial é bruxaria moderna! Estamos indo contra a vontade de Deus!",
 		papel: "Aprovar restrições em IA?",
-		audio: snd_policial_1
+		audio: snd_bispo_1
 	},
 	
 	bispo_2: {
@@ -253,7 +254,7 @@ global.cards =
 		negado: "+5 Din ; -5 aprov",
 		fala: "Gostaria de criar novos feriados em nome de Deus, me de sua aprovação!",
 		papel: "Criar novos feriados?",
-		audio: snd_policial_1
+		audio: snd_bispo_2
 	},
 	
 	bispo_3: {
@@ -264,7 +265,7 @@ global.cards =
 		negado: "+10 din ; -5 inf ; -5 aprov",
 		fala: "Precisamos de mais locais para o fiéis!",
 		papel: "Construir mais igrejas?",
-		audio: snd_policial_1
+		audio: snd_bispo_3
 	},
 	
 	bispo_4: {
@@ -275,7 +276,7 @@ global.cards =
 		negado: "+15 com ; -10 din ; -5 aprov",
 		fala: "Os experimentos nas platações são profanos, apenas Deus modifica suas criações!",
 		papel: "Impedir a modificação genética das plantas?",
-		audio: snd_policial_1
+		audio: snd_bispo_4
 	},
 	
 	bispo_5: {
@@ -286,7 +287,7 @@ global.cards =
 		negado: "+10 com ; -5 inf ; -5 aprov",
 		fala: "Mesmo que a natalidade esteja alta, o aborto é contra a vontade de Deus, proíba e puna os praticantes!",
 		papel: "Enforçar leis mais rigorosas sobre o Aborto?",
-		audio: snd_policial_1
+		audio: snd_bispo_5
 	},
 	
 	politico_1: {
@@ -297,7 +298,7 @@ global.cards =
 		negado: "+10 aprov; -10 din",
 		fala: "Os gastos estão muito altos, deveriamos aumentar as taxas e os impostos.",
 		papel: "Aumentar impostos?",
-		audio: snd_policial_1
+		audio: snd_politico_1
 	},
 	
 	politico_2: {
@@ -308,7 +309,7 @@ global.cards =
 		negado: "-10 com; +10 din; -5 aprov",
 		fala: "Nossos agricultores precisam de equipamentos modernos. Se diminuirmos as taxas de importações, teremos colheitas maiores.",
 		papel: "Diminuir o custo das máquinas agrárias?",
-		audio: snd_policial_1
+		audio: snd_politico_2
 	},
 	
 	politico_3: {
@@ -319,7 +320,7 @@ global.cards =
 		negado: "+10 com; -10 aprov",
 		fala: "Presidente, o país vizinho propõe abrir as fronteiras para livre passagem. Devemos aceitar?",
 		papel: "Abrir as fronteiras?",
-		audio: snd_policial_1
+		audio: snd_politico_3
 	},
 	
 	politico_4: {
@@ -330,7 +331,7 @@ global.cards =
 		negado: "-5 aprov; +20 din; -10 com",
 		fala: "Uma crise mundial ameaça aumentar o preço das carnes. O que devemos fazer?",
 		papel: "Auxiliar as familias afetadas?",
-		audio: snd_policial_1
+		audio: snd_politico_4
 	},
 	
 	politico_5: {
@@ -341,7 +342,7 @@ global.cards =
 		negado: "-10 aprov; -5 inf; +10 din",
 		fala: "Senhor presidente, os estados estão pedindo dinheiro para obras públicas. Deveriamos ajudar?",
 		papel: "Financiar as obras públicas?",
-		audio: snd_policial_1
+		audio: snd_politico_5
 	},
 	
 	politico_6: {
@@ -352,7 +353,7 @@ global.cards =
 		negado: "+10 aprov; +5 com; -15 inf",
 		fala: "Uma mineradora pretende explorar terras ao norte, e precisa de permissão para desmatar florestas, ela promete um bom pagamento.",
 		papel: "Autorizar o desmatamento?",
-		audio: snd_policial_1
+		audio: snd_politico_6
 	},
 	
 	politico_7: {
@@ -363,7 +364,7 @@ global.cards =
 		negado: "+5 aprov; +10 inf; -10 din",
 		fala: "Os governadores estão pedindo aumento de verba para seus salários, mas esse dinheiro poderia ser gasto na infraestrutura.",
 		papel: "Autorizar o aumento de verba?",
-		audio: snd_policial_1
+		audio: snd_politico_7
 	},
 	
 	politico_8: {
@@ -374,7 +375,7 @@ global.cards =
 		negado: "-10 com; -5 inf; -5 aprov; +20 din",
 		fala: "Uma grande obra de irrigação poderia aumentar a produção agrícola.",
 		papel: "Aprovar a obra de irrigação?",
-		audio: snd_policial_1
+		audio: snd_politico_8
 	},
 	
 	politico_9: {
@@ -385,7 +386,7 @@ global.cards =
 		negado: "-5 inf; +10 din",
 		fala: "Estamos exportanto muito petróleo, se focarmos na produção nacional podemos abaixar o preço da gasolina.",
 		papel: "Restringir a exportação do petróleo?",
-		audio: snd_policial_1
+		audio: snd_politico_9
 	},
 	
 	politico_10: {
@@ -396,7 +397,7 @@ global.cards =
 		negado: "+5 aprov",
 		fala: "O uso de celular nas salas de aula dificulta o aprendizado. Deveriamos banir o uso.",
 		papel: "Proibir o uso de celulares no ambiente escolar?",
-		audio: snd_policial_1
+		audio: snd_politico_10
 	},
 	
 	politico_11: {
@@ -407,7 +408,7 @@ global.cards =
 		negado: "-10 com; -5 aprov; +15 din",
 		fala: "Uma seca ameaça a produção de alimentos no próximo ano, deveriamos passar esse ano se preparando.",
 		papel: "Ajudar a população a se preparar?",
-		audio: snd_policial_1
+		audio: snd_politico_11
 	},
 	
 	politico_12: {
@@ -418,7 +419,7 @@ global.cards =
 		negado: "-5 aprov; +10 din; -10 com",
 		fala: "Caminhoneiros não conseguem levar comida pelo país devido a condição das rodovias, e pedem ajuda do governo.",
 		papel: "Investir na construção de novas rodovias?",
-		audio: snd_policial_1
+		audio: snd_politico_12
 	},
 	
 	politico_13: {
@@ -429,7 +430,7 @@ global.cards =
 		negado: "-10 com; +15 din",
 		fala: "Senhor presidente, uma empresa nacional de alimentos precisa de incentivo para modernizar suas fábricas.",
 		papel: "Ajudar a empresa?",
-		audio: snd_policial_1
+		audio: snd_politico_13
 	},
 	
 	politico_14: {
@@ -440,7 +441,7 @@ global.cards =
 		negado: "+10 inf; +5 aprov; -15 din",
 		fala: "Um país estrangeiro deseja implementar indústrias em nosso solo, deveriamos permitir?",
 		papel: "Permitir indústrias estrangeiras?",
-		audio: snd_policial_1
+		audio: snd_politico_14
 	},
 	
 	politico_15: {
@@ -451,7 +452,7 @@ global.cards =
 		negado: "-10 inf; +10 din",
 		fala: "Senhor presidente, O exército está pedindo investimento para modernizar seus equipamentos.",
 		papel: "Modeernizar o exército?",
-		audio: snd_policial_1
+		audio: snd_politico_15
 	},
 	
 	ativista_1: {
@@ -462,7 +463,7 @@ global.cards =
 		negado: "-10 aprov; +10 din",
 		fala: "Somos uma ong que abriga moradores de rua. Gostaríamos de uma pequena doação para continuarmos com nosso serviço.",
 		papel: "Financiar a ONG?",
-		audio: snd_policial_1
+		audio: snd_ativista_1
 	},
 	ativista_2: {
 		owner : global.people.ativista,
@@ -472,7 +473,7 @@ global.cards =
 		negado: "+5 aprov",
 		fala: "A internet não é um lugar seguro para crianças. Por isso derrubamos websites que podem ser prejudiciais para crianças. E se você quiser podemos derrubar os dos seus inimigos políticos também...",
 		papel: "Censurar websites?",
-		audio: snd_policial_1
+		audio: snd_ativista_2
 	},
 	ativista_3: {
 		owner : global.people.ativista,
@@ -482,7 +483,7 @@ global.cards =
 		negado: "-10 aprov; +10 inf",
 		fala: "A inteligência artificial precisa ser regulamentada antes que surjam ainda mais deep fakes e antes que ainda mais arte seja roubadas.",
 		papel: "Regulamentar IAs?",
-		audio: snd_policial_1
+		audio: snd_ativista_3
 	},
 	ativista_4: {
 		owner : global.people.ativista,
@@ -492,7 +493,7 @@ global.cards =
 		negado: "-5 aprov; -5 inf; +10 din",
 		fala: "A educação do país está em crise. As escolas precisam de mais verba.",
 		papel: "Investir nas escolas?",
-		audio: snd_policial_1
+		audio: snd_ativista_4
 	},
 	ativista_5: {
 		owner : global.people.ativista,
@@ -502,7 +503,7 @@ global.cards =
 		negado: "-10 inf ; +15 din",
 		fala: "Nós propomos uma política de acolhimento dos imigrantes no mercado de trabalho para suprir as demandas no mercado e queríamos saber que o senhor acha disso.",
 		papel: "Tratar dos assuntos de imigração?",
-		audio: snd_policial_1
+		audio: snd_ativista_5
 	},
 	ativista_6: {
 		owner : global.people.ativista,
@@ -512,7 +513,7 @@ global.cards =
 		negado: "-5 aprov; +5 din",
 		fala: " A escala 6x1 é desumana. Pela saúde dos trabalhadores você precisa fazer algo.",
 		papel: "Mudar a carga horária?",
-		audio: snd_policial_1
+		audio: snd_ativista_6
 	},
 	ativista_7: {
 		owner : global.people.ativista,
@@ -522,7 +523,7 @@ global.cards =
 		negado: "+20 din; -15 aprov",
 		fala: "Essas Bets estão endividando as famílias brasileiras, você precisa bani-las.",
 		papel: "Banir plataformas de casino?",
-		audio: snd_policial_1
+		audio: snd_ativista_7
 	},
 	ativista_8: {
 		owner : global.people.ativista,
@@ -532,7 +533,7 @@ global.cards =
 		negado: "-5 din; -5 aprov; +10 inf",
 		fala: "A pichação é como a arte da cidade, você não pode só passar tinta cinza por cima.",
 		papel: "Preservar as pichações?",
-		audio: snd_policial_1
+		audio: snd_ativista_8
 	},
 	ativista_9: {
 		owner : global.people.ativista,
@@ -542,7 +543,7 @@ global.cards =
 		negado: "-10 aprov; +15 din",
 		fala: "As nossas manifestações não irão parar até que leis que realmente punam racistas sejam criadas.",
 		papel: "Aprovar leis mais rigorosas sobre o racismo?",
-		audio: snd_policial_1
+		audio: snd_ativista_9
 	},
 	ativista_10: {
 		owner : global.people.ativista,
@@ -552,9 +553,8 @@ global.cards =
 		negado: "+5 inf; -10 aprov",
 		fala: "Com a finalidade de acabar com a violência policial, viemos hoje com um abaixo assinado para que os culpados sejam punidos.",
 		papel: "Aprovar leis sobre violência policial?",
-		audio: snd_policial_1
+		audio: snd_ativista_10
 	},
-	
 	midia_1 : {
 		owner : global.people.reporter,
 		aprovar: "Nada a esconder, abriremos as contas para todos verem.",
@@ -563,7 +563,7 @@ global.cards =
 		negado: "-15 aprov; +10 din",
 		fala: "Um telejornal investiga supostos gastos excessivos no seu gabinete.",
 		papel: "Abrir as contas para todos verem?",
-		audio: snd_policial_1
+		audio: snd_reporter_1
 	},
 
 	midia_2 : {
@@ -574,7 +574,7 @@ global.cards =
 		negado: "-10 aprov; +10 din",
 		fala: "Um canal de notícias oferece espaço para uma entrevista exclusiva sobre seu governo.",
 		papel: "Aceitar a entrevista exclusiva?",
-		audio: snd_policial_1
+		audio: snd_reporter_2
 	},
 
 	midia_3 : {
@@ -585,7 +585,7 @@ global.cards =
 		negado: "+15 aprov; -10 din",
 		fala: "Manchetes internacionais acusam o país de censura à imprensa.",
 		papel: "Proteger a imagem do país filtrando informações?",
-		audio: snd_policial_1
+		audio: snd_reporter_3
 	},
 
 	midia_4 : {
@@ -596,7 +596,7 @@ global.cards =
 		negado: "-10 aprov; +10 din",
 		fala: "Um jornalista famoso quer acesso antecipado a documentos sigilosos para uma reportagem.",
 		papel: "Permitir acesso antecipado aos documentos?",
-		audio: snd_policial_1
+		audio: snd_reporter_4
 	},
 
 	midia_5 : {
@@ -607,7 +607,7 @@ global.cards =
 		negado: "-15 din; +15 aprov",
 		fala: "Uma reportagem sensacionalista distorce dados do seu governo.",
 		papel: "Processar a mídia por distorção de dados?",
-		audio: snd_policial_1
+		audio: snd_reporter_5
 	},
 
 	midia_6 : {
@@ -618,7 +618,7 @@ global.cards =
 		negado: "-10 aprov; +10 din",
 		fala: "Uma rede de TV quer transmitir ao vivo a inauguração de uma obra pública.",
 		papel: "Permitir a transmissão ao vivo da inauguração?",
-		audio: snd_policial_1
+		audio: snd_reporter_6
 	},
 
 	midia_7 : {
@@ -629,7 +629,7 @@ global.cards =
 		negado: "+15 aprov; -10 din",
 		fala: "Um influencer popular faz críticas pesadas à sua gestão nas redes sociais.",
 		papel: "Responder às críticas do influencer?",
-		audio: snd_policial_1
+		audio: snd_reporter_7
 	},
 
 	midia_8 : {
@@ -640,7 +640,7 @@ global.cards =
 		negado: "+15 aprov; -5 din",
 		fala: "Um jornal famoso oferece apoio político em troca de benefícios.",
 		papel: "Aceitar a barganha do jornal?",
-		audio: snd_policial_1
+		audio: snd_reporter_8
 	},
 
 	midia_9 : {
@@ -651,7 +651,7 @@ global.cards =
 		negado: "-10 aprov; +10 din",
 		fala: "Uma emissora quer patrocínio do governo para um documentário sobre a história do país.",
 		papel: "Patrocinar o documentário?",
-		audio: snd_policial_1
+		audio: snd_reporter_9
 	},
 
 	midia_10 : {
@@ -662,7 +662,7 @@ global.cards =
 		negado: "-5 aprov; -5 inf; +10 din",
 		fala: "Boatos falsos se espalham rapidamente pelas redes sociais sobre uma crise inexistente.",
 		papel: "Desmentir publicamente os boatos?",
-		audio: snd_policial_1
+		audio: snd_reporter_10
 	},
 	
 	policial_1 : {
@@ -783,7 +783,7 @@ global.cards =
 		negado: "+10 din; -15 aprov; -10 inf",
 		fala: "Senhor, vários dispositivos conectados a rede hospitalar estão experienciando falhas, como devemos tratar este assunto?",
 		papel: "Investir em cibersegurança médica?",
-		audio: snd_policial_1
+		audio: snd_ministro_1
 	},
 
 	saude_2 : {
@@ -794,7 +794,7 @@ global.cards =
 		negado: "+15 din; -10 inf",
 		fala: "O projeto de embarcações hospitalares para áreas de mata e rio foi um sucesso, pedimos permissão para expandir o escopo.",
 		papel: "Expandir os hospitais flutuantes?",
-		audio: snd_policial_1
+		audio: snd_ministro_2
 	},
 
 	saude_3 : {
@@ -805,7 +805,7 @@ global.cards =
 		negado: "-10 aprov; +15 din",
 		fala: "Recebemos relatos de metanol nas bebidas, precisamos impedir o contrabando antes que mais pessoas morram.",
 		papel: "Investir em parar a fabricação de falsas garrafas?",
-		audio: snd_policial_1
+		audio: snd_ministro_3
 	},
 
 	saude_4 : {
@@ -816,7 +816,7 @@ global.cards =
 		negado: "-10 aprov; -5 inf; +10 din",
 		fala: "Um novo remédio foi aprovado com efeitos secundários muito extremos, e a população demanda uma investigação",
 		papel: "Pesquisar os efeitos do remédio?",
-		audio: snd_policial_1
+		audio: snd_ministro_4
 	},
 
 	saude_5 : {
@@ -827,7 +827,7 @@ global.cards =
 		negado: "+5 aprov; -10 din",
 		fala: "O uso de IA é considerado polêmico pelos nossos pacientes, especialmente em um ambiente hospitalar. Deveriamos permitir o uso de I.A para recursos de terapia?",
 		papel: "Manter as IAs como psicólogos?",
-		audio: snd_policial_1
+		audio: snd_ministro_5
 	},
 
 	saude_6 : {
@@ -838,7 +838,7 @@ global.cards =
 		negado: "+5 aprov; -5 inf; +10 din",
 		fala: "Senhor Presidente, estamos registrando casos de mudanças genéticas súbitas em recém-nascidos.",
 		papel: "Investigar as mudanças genéticas em recém-nascidos?",
-		audio: snd_policial_1
+		audio: snd_ministro_6
 	},
 
 	saude_7 : {
@@ -849,7 +849,7 @@ global.cards =
 		negado: "-5 din; +5 inf; +5 aprov",
 		fala: "Um aplicativo que promete diagnosticar doenças por selfie viraliza e causa confusão, milhões de pessoas acreditam estar doentes.",
 		papel: "Como lidar com o aplicativo de diagnóstico?",
-		audio: snd_policial_1
+		audio: snd_ministro_7
 	},
 
 	saude_8 : {
@@ -860,7 +860,7 @@ global.cards =
 		negado: "-5 din; +5 inf;",
 		fala: "Casos de peste bubônica estão surgindo em cidades modernas sem qualquer vetor conhecido. O que devemos fazer?",
 		papel: "Combater o ressurgimento da peste bubônica?",
-		audio: snd_policial_1
+		audio: snd_ministro_8
 	},
 
 	saude_9 : {
@@ -871,7 +871,7 @@ global.cards =
 		negado: "-10 aprov; +5 inf; -5 din",
 		fala: "A condição dos hospitais da rede pública é deplorável, precisamos de mais investimento na infraestrutura.",
 		papel: "Investir na construção dos hospitais?",
-		audio: snd_policial_1
+		audio: snd_ministro_9
 	},
 
 	saude_10 : {
@@ -882,7 +882,7 @@ global.cards =
 		negado: "+10 din; -5 inf; -5 aprov",
 		fala: "Uma campanha online de fake news está mudando a percepção do público sobre vacinas, precisamos combater isso.",
 		papel: "Continuar com a terapia de remoção de memórias?",
-		audio: snd_policial_1
+		audio: snd_ministro_10
 	},
 	
 	banqueiro_1 : {
@@ -893,7 +893,7 @@ global.cards =
 		negado: "+10 aprov; -10 din",
 		fala: "Por favor me dê uma ajudinha e corte um pouco dos impostos do banco, prometo que irá valer a pena",
 		papel: "Cortar impostos bancários?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_1
 	},
 
 	banqueiro_2 : {
@@ -904,7 +904,7 @@ global.cards =
 		negado: "+10 inf; +15 aprov; -15 din",
 		fala: "Estou querendo abrir mais bancos pela cidade, você bem que poderia me dar uma ajudinha e quebrar aquelas casas velhas do quarteirão e dar o terreno para mim",
 		papel: "Demolir casas para construir bancos?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_2
 	},
 
 	banqueiro_3 : {
@@ -915,7 +915,7 @@ global.cards =
 		negado: "+15 aprov; -20 din",
 		fala: "A gente pode fazer uma parceria banco estado, pode ser uma bela oferta para você meu parceiro, a única coisa necessária é que eu seja o único banco da cidade. Fechado?",
 		papel: "Criar monopólio bancário?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_3
 	},
 
 	banqueiro_4 : {
@@ -926,7 +926,7 @@ global.cards =
 		negado: "+15 aprov; -15 din",
 		fala: "Ora ora, quero mais investimentos na área de medicina, virar um dos grandes nomes não só pelo meu banco mas pela minha caridade, você pode privatizar alguns dos hospitais públicos para mim?",
 		papel: "Privatizar hospitais públicos?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_4
 	},
 
 	banqueiro_5 : {
@@ -937,7 +937,7 @@ global.cards =
 		negado: "+15 aprov; -10 din",
 		fala: "Tem várias pessoas protestando contra a minha grande fortuna, você pode usar da força policial ir lá e pará-los?",
 		papel: "Reprimir protestos contra o banqueiro?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_5
 	},
 
 	banqueiro_6 : {
@@ -948,7 +948,7 @@ global.cards =
 		negado: "+15 din; -10 com",
 		fala: "Olá grande amigo, vos mercê poderia dar permissão a eu abrir uns mercados filiais ao banco, claro que também precisaria da sua ajuda para a construção",
 		papel: "Permitir mercados filiais do banco?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_6
 	},
 
 	banqueiro_7 : {
@@ -959,7 +959,7 @@ global.cards =
 		negado: "+10 aprov; +15 inf; -10 din",
 		fala: "Nesse dia você pretende anunciar uma nova lei certo? Vos morcê poderia ao mesmo tempo deixar eu fazer umas 'coisinhas' prometo que vale a pena e o povo nem vai perceber",
 		papel: "Permitir manobras financeiras obscuras?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_7
 	},
 
 	banqueiro_8 : {
@@ -970,7 +970,7 @@ global.cards =
 		negado: "-10 din; +5 aprov",
 		fala: "Estou pensando em aumentar os juros, se vos mercê quiser posso aumentar mais e te darei essa parte a mais.",
 		papel: "Aumentar os juros bancários?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_8
 	},
 
 	banqueiro_9 : {
@@ -981,7 +981,7 @@ global.cards =
 		negado: "-25 din; +10 aprov",
 		fala: "Podemos fazer uma aliança, iremos fazer uma loteria agora, você sairá como campeão mas preciso de umas insenções de impostos.",
 		papel: "Criar loteria com isenções fiscais?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_9
 	},
 
 	banqueiro_10 : {
@@ -992,6 +992,6 @@ global.cards =
 		negado: "+20 aprov; +15 com; +15 inf; -35 din",
 		fala: "Posso te fazer mais rico do que tudo, porém vos mercê terá que fazer algumas coisinhas que o público provavelmente não gostaria... temos um acordo?",
 		papel: "Aceitar a oferta obscura do banqueiro?",
-		audio: snd_policial_1
+		audio: snd_banqueiro_10
 	}
 }
