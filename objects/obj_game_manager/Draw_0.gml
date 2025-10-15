@@ -1,18 +1,15 @@
 /// @description
 if (started == false) {exit};
 
-if (action_index == "TUTORIAL")
-|| (action_index == "DAY CHANGING")
+if (action_index == "DAY CHANGING")
+|| (action_index == "TUTORIAL")
 {
 	if (day_background_alpha < 1)
 	&& (room == rm_menu)
 	{
 		draw_sprite_ext(spr_tutorial, 0, 0, 0, 2, 2, 0, c_white, 1);
 	}
-}
-
-if (action_index == "DAY CHANGING")
-{
+	
 	draw_set_color(c_black);
 	draw_set_alpha(day_background_alpha);
 	draw_rectangle(0, 0, room_width, room_height, false);
@@ -75,7 +72,8 @@ else
 	draw_sprite_ext(spr_icons, 2, _xx - 35 + 1, _yy - 3 + _sep + _sep + 1, 1, 1, 0, _col, 1);
 	draw_sprite(spr_icons, 2, _xx - 35, _yy - 3 + _sep + _sep);
 	
-	draw_text(_xx + 5, _yy + 3 + _sep * 2, "Aprovacao: " + string(global.resources.aprovacao));
+	draw_text_color(_xx + 6, _yy + 4 + _sep * 2, "Aprovação: " + string(global.resources.aprovacao), _col, _col, _col, _col, 1);
+	draw_text(_xx + 5, _yy + 3 + _sep * 2, "Aprovação: " + string(global.resources.aprovacao));
 	
 	// Infraestrutura
 	draw_sprite(spr_bar, 0, _xx - 45, _yy - 6 + _sep + _sep + _sep);
@@ -83,6 +81,7 @@ else
 	draw_sprite_ext(spr_icons, 3, _xx - 35 + 1, _yy - 3 + _sep + _sep + _sep + 1, 1, 1, 0, _col, 1);
 	draw_sprite(spr_icons, 3, _xx - 35, _yy - 3 + _sep + _sep + _sep);
 	
+	draw_text_color(_xx + 6, _yy + 4 + _sep * 3, "Infraestrutura: " + string(global.resources.infraestrutura), _col, _col, _col, _col, 1);
 	draw_text(_xx + 5, _yy + 3 + _sep * 3, "Infraestrutura: " + string(global.resources.infraestrutura));
 	
 	draw_set_color(c_black);

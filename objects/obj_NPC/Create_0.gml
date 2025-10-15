@@ -6,6 +6,8 @@ papel = ""; // Isso é oq na teoria estaria escrito no papel q é levantado na c
 aprovar = "";
 negar = "";
 
+aprov_state = "";
+
 idle_sprite = undefined;
 talk_sprite = undefined;
 happy_sprite = undefined;

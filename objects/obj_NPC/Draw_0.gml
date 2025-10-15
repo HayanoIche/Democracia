@@ -9,35 +9,50 @@ if (keyboard_check(vk_shift)) {
 _sprite = idle_sprite;
 _front_sprite = front_idle_sprite
 
-if (instance_exists(obj_textbox)) {
-	if (obj_textbox.draw_char < obj_textbox.text_lenght[obj_textbox.page]) {
-		_sprite = talk_sprite;
-		_front_sprite = front_talk_sprite
+if (aprov_state == "")
+{
+	if (instance_exists(obj_textbox)) {
+		if (obj_textbox.draw_char < obj_textbox.text_lenght[obj_textbox.page]) {
+			_sprite = talk_sprite;
+			_front_sprite = front_talk_sprite
+		}
+	}
+	else
+	{
+		if (instance_exists(obj_denided)) {
+			if (obj_denided.selected) {
+				_sprite = angry_sprite;
+				_front_sprite = front_angry_sprite;
+			
+				x = smooth_approach(x, RESOLUTION_WIDTH/2 + 40, 0.5);
+			}
+		}
+	
+		if (instance_exists(obj_aproved)) {
+			if (obj_aproved.selected) {
+				_sprite = happy_sprite;
+				_front_sprite = front_happy_sprite;
+			
+				x = smooth_approach(x, RESOLUTION_WIDTH/2 - 40, 0.5);
+			}
+		}
+	}
+
+	if (_sprite == idle_sprite) {
+		x = smooth_approach(x, RESOLUTION_WIDTH/2, 0.1);
 	}
 }
 else
 {
-	if (instance_exists(obj_denided)) {
-		if (obj_denided.selected) {
-			_sprite = angry_sprite;
-			_front_sprite = front_angry_sprite;
-			
-			x = smooth_approach(x, RESOLUTION_WIDTH/2 + 40, 0.5);
-		}
+	if (aprov_state == "denied") {
+		_sprite = angry_sprite;
+		_front_sprite = front_angry_sprite;
 	}
 	
-	if (instance_exists(obj_aproved)) {
-		if (obj_aproved.selected) {
-			_sprite = happy_sprite;
-			_front_sprite = front_happy_sprite;
-			
-			x = smooth_approach(x, RESOLUTION_WIDTH/2 - 40, 0.5);
-		}
+	if (aprov_state == "aproved") {
+		_sprite = happy_sprite;
+		_front_sprite = front_happy_sprite;
 	}
-}
-
-if (_sprite == idle_sprite) {
-	x = smooth_approach(x, RESOLUTION_WIDTH/2, 0.1);
 }
 
 sprite_index = _sprite;

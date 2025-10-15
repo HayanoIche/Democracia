@@ -83,15 +83,23 @@ function bring_new_person() {
 
 // As outras funções permanecem inalteradas
 function approve_request(npc_id) {
-    var effects = npc_id.card_data.aceito;  
-    apply_effects(effects);                 
-    instance_destroy(npc_id);
+	obj_NPC.aprov_state = "aproved";
+	
+    var effects = npc_id.card_data.aceito;
+    apply_effects(effects);
+	
+	obj_game_manager.action_index = "NPC EXIT";
+    //instance_destroy(npc_id);
 }
 
 function deny_request(npc_id) {
+	obj_NPC.aprov_state = "denied";
+	
     var effects = npc_id.card_data.negado;
     apply_effects(effects);
-    instance_destroy(npc_id);
+    
+	obj_game_manager.action_index = "NPC EXIT";
+	//instance_destroy(npc_id);
 }
 
 function apply_effects(effect_string) {

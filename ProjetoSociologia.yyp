@@ -172,6 +172,7 @@
     {"id":{"name":"spr_banqueiro_feliz","path":"sprites/spr_banqueiro_feliz/spr_banqueiro_feliz.yy",},},
     {"id":{"name":"spr_banqueiro_parado","path":"sprites/spr_banqueiro_parado/spr_banqueiro_parado.yy",},},
     {"id":{"name":"spr_bar","path":"sprites/spr_bar/spr_bar.yy",},},
+    {"id":{"name":"spr_bispo_bravo_braco","path":"sprites/spr_bispo_bravo_braco/spr_bispo_bravo_braco.yy",},},
     {"id":{"name":"spr_bispo_bravo","path":"sprites/spr_bispo_bravo/spr_bispo_bravo.yy",},},
     {"id":{"name":"spr_bispo_fala","path":"sprites/spr_bispo_fala/spr_bispo_fala.yy",},},
     {"id":{"name":"spr_bispo_feliz","path":"sprites/spr_bispo_feliz/spr_bispo_feliz.yy",},},

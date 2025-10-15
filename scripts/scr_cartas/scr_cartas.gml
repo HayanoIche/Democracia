@@ -38,7 +38,7 @@ global.people = {
 		sprite_talk_front: noone,
 		
 		sprite_angry: spr_bispo_bravo,
-		sprite_angry_front: noone,
+		sprite_angry_front: spr_bispo_bravo_braco,
 		
 		sprite_happy: spr_bispo_feliz,
 		sprite_happy_front: noone

@@ -133,7 +133,36 @@ switch(action_index)
 		}
 		
 		break; }
-		
+	
+	case "NPC EXIT": {
+			if (instance_exists(obj_aproved)) {instance_destroy(obj_aproved)};
+			if (instance_exists(obj_denided)) {instance_destroy(obj_denided)};
+			
+			if (instance_exists(obj_NPC))
+			{
+				if (day_background_alpha < 1)
+				{
+					day_background_alpha += 1/60;
+				}
+				else
+				{
+					instance_destroy(obj_NPC);
+				}
+				
+			}
+			else
+			{
+				if (day_background_alpha > 0)
+				{
+					day_background_alpha -= 1/60;
+				}
+				else
+				{
+					action_index = "WAITING SOMEONE";
+				}
+			}
+		break; }
+	
 	case "DAY END": {
 		if (day_background_alpha < 1)
 		{
