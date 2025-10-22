@@ -2,10 +2,6 @@
 var _sprite = idle_sprite;
 var _front_sprite = front_idle_sprite;
 
-if (keyboard_check(vk_shift)) {
-	_sprite = happy_sprite;
-}
-
 _sprite = idle_sprite;
 _front_sprite = front_idle_sprite
 

@@ -218,7 +218,7 @@ global.cards =
 	faccao_7 : {
 		owner : global.people.traficante,
 		aprovar: "Eles já foram despensados.",
-		aceito: "-10 aprov ; +10 inf;",
+		aceito: "-10 aprov ; +10 inf",
 		negar: "Polícia é para proteger o povo.",
 		negado: "-10 din ; +10 aprov ; +5 inf",
 		fala: "Tira os ganso da rota e coloca minha rapaziada na contenção. A cidade fica segura do meu jeito...",
@@ -251,7 +251,7 @@ global.cards =
 	faccao_10 : {
 		owner : global.people.traficante,
 		aprovar: "Irei ver o que posso fazer.",
-		aceito: "-10 Din ; -5 inf ; + 15 aprov",
+		aceito: "-10 Din ; -5 inf ; +15 aprov",
 		negar: "Se vira.",
 		negado: "+10 din ; -5 inf ; -5 aprov",
 		fala: "A milícia do Rocha tá querendo tomar nosso território. Me apoia que eu garanto uns votos pra você.",
@@ -761,7 +761,7 @@ global.cards =
 		aceito: "+15 com; -10 din; -5 inf",
 		negar: "Não vale a pena",
 		negado: "-10 com; +15 din",
-		fala: "Senhor, Depois de revisar o nosso metodo de produção foi avistado um erro que esta disperdiçando comida o suficiente pra alimentar cidades, porem consertar ele requer um investimento grande de dinheiro e mão de obra",
+		fala: "Senhor, Depois de revisar o nosso metodo de produção foi avistado um erro que esta disperdiçando comida o suficiente pra alimentar cidades, porém consertar ele requer um investimento grande de dinheiro e mão de obra",
 		papel: "Consertar o sistema de produção de comida?",
 		audio: snd_policial_7
 	},

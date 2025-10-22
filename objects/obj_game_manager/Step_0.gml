@@ -156,7 +156,7 @@ switch(action_index)
 			{
 				if (day_background_alpha < 1)
 				{
-					day_background_alpha += 1/60;
+					day_background_alpha += 1/40;
 				}
 				else
 				{

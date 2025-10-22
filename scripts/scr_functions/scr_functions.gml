@@ -54,6 +54,8 @@ function bring_new_person() {
     var new_npc = instance_create_depth(750, 350, 0, obj_NPC);
     
     // coloca as infos dos cards no OBJ_Newnpc
+	new_npc.person = selected_card.owner;
+	
     new_npc.sprite_index = selected_card.owner.sprite_idle;
 	new_npc.idle_sprite = selected_card.owner.sprite_idle;
 	new_npc.talk_sprite = selected_card.owner.sprite_talk;

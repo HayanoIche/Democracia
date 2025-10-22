@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.834966,
+  "duration":1.8928798,
   "name":"snd_traficante_aprovado1",
   "parent":{
     "name":"Aprovado&Negado",

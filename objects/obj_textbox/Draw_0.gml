@@ -215,5 +215,8 @@ draw_sprite_ext(spr_textbox, 0, 480, 140, 2, 2, 0, c_white, 1);
 
 draw_surface_ext(surface, 480, 140, 1, 1, 0, c_white, 1);
 
+var _col = c_black;
 draw_set_font(global.font);
-draw_text(480, 120, string(obj_NPC.name));
+
+draw_text_color(480 + 1, 120 + 1, string(obj_NPC.name), _col, _col, _col, _col, 1);
+draw_text_color(480, 120, string(obj_NPC.name), c_white, c_white, c_white, c_white, 1);

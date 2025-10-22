@@ -1,7 +1,8 @@
 /// @description
 image_alpha = 1;
 
-if (selected == true) {image_alpha = 0.8
+if (selected == true) {
+	image_alpha = 0.8;
 	var _aproved_string = "";
 	var effects = string_split(obj_NPC.card_data.aceito, ";");
 	/*
@@ -55,6 +56,7 @@ if (selected == true) {image_alpha = 0.8
 	
 	draw_sprite_ext(spr_bar, 0, RESOLUTION_WIDTH/2 - string_width(obj_NPC.card_data.aprovar)/2 - 20, 400 - 10, _w/sprite_get_width(spr_bar), 1, 0, c_white, 1);
 	draw_text_color(RESOLUTION_WIDTH/2 - string_width(obj_NPC.card_data.aprovar)/2 + 1, 400 + 1, obj_NPC.card_data.aprovar, c_black, c_black, c_black, c_black, 1);
+	draw_set_color(c_white);
 	draw_text_transformed(RESOLUTION_WIDTH/2 - string_width(obj_NPC.card_data.aprovar)/2, 400, obj_NPC.card_data.aprovar, 1, 1, 0);
 };
 

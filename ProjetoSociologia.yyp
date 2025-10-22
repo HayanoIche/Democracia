@@ -84,7 +84,7 @@
     {"id":{"name":"scr_cartas","path":"scripts/scr_cartas/scr_cartas.yy",},},
     {"id":{"name":"scr_functions","path":"scripts/scr_functions/scr_functions.yy",},},
     {"id":{"name":"scr_game_text","path":"scripts/scr_game_text/scr_game_text.yy",},},
-    {"id":{"name":"scr_Relogio","path":"scripts/scr_Relogio/scr_Relogio.yy",},},
+    {"id":{"name":"scr_relogio","path":"scripts/scr_relogio/scr_relogio.yy",},},
     {"id":{"name":"scr_text_functions","path":"scripts/scr_text_functions/scr_text_functions.yy",},},
     {"id":{"name":"snd_ativista_1","path":"sounds/snd_ativista_1/snd_ativista_1.yy",},},
     {"id":{"name":"snd_ativista_10","path":"sounds/snd_ativista_10/snd_ativista_10.yy",},},

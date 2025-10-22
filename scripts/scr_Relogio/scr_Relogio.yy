@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Relogio",
+  "%Name":"scr_relogio",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Relogio",
+  "name":"scr_relogio",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
