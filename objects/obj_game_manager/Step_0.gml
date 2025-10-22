@@ -1,4 +1,6 @@
 // Baguio Debug
+if (room == rm_menu_presstart) {exit};
+
 clock_update();
 
 global.delta_t = (delta_time/1000000) * game_get_speed(gamespeed_fps);
@@ -9,6 +11,18 @@ resource_check();
 if (font_add_get_enable_aa())
 {
     font_add_enable_aa(false);
+}
+
+if (action_index == "PRESSTART")
+{
+	if (day_background_alpha > 0)
+	{
+		day_background_alpha -= 0.05;
+	}
+	else
+	{
+		action_index = "TUTORIAL";
+	}
 }
 
 if (started == false) {exit};

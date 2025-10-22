@@ -1,4 +1,15 @@
 /// @description
+if (room == rm_menu_presstart) {exit};
+
+if (action_index == "PRESSTART")
+{
+	draw_set_color(c_black);
+	draw_set_alpha(day_background_alpha);
+	draw_rectangle(0, 0, room_width, room_height, false);
+	draw_set_color(c_white);
+	draw_set_alpha(1);
+}
+
 if (started == false) {exit};
 
 if (action_index == "DAY CHANGING")
@@ -88,8 +99,6 @@ else
 	draw_set_alpha(day_background_alpha);
 	draw_rectangle(0, 0, room_width, room_height, false);
 	draw_set_alpha(c_white);
-
-	draw_set_color(c_white);
 }
 
 if (action_index == "DAY END")

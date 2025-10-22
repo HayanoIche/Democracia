@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.5492518,
+  "duration":3.753084,
   "name":"snd_ativista_4",
   "parent":{
     "name":"Ativista",

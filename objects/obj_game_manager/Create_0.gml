@@ -5,14 +5,14 @@ global.font = font_add("unifont.otf", 12, false, false, 0, 256);
 global.delta_t = delta_time / 1000000;
 #macro delta global.delta_t;
 
-action_index = "TUTORIAL";
+action_index = "PRESSTART";
 
 started = false;
 
 day_text_timer = 0;
 day_text_alpha = 0;
 day_changed = false;
-day_background_alpha = 0;
+day_background_alpha = 1;
 timer = 0;
 
 // tipo o fun number do undertale

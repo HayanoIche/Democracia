@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_banqueiro_aprovado2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.9288208,
+  "name":"snd_banqueiro_aprovado2",
+  "parent":{
+    "name":"Aprovado&Negado",
+    "path":"folders/Audios/Banqueiro/Aprovado&Negado.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_banqueiro_aprovado2.mp3",
+  "type":0,
+  "volume":1.0,
+}

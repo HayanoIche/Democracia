@@ -11,7 +11,10 @@ global.people = {
 		sprite_angry_front: spr_ativista_brava,
 		
 		sprite_happy: noone,
-		sprite_happy_front: spr_ativista_feliz
+		sprite_happy_front: spr_ativista_feliz,
+		
+		audios_aprov : [snd_ativista_aprovado1, snd_ativista_aprovado2, snd_ativista_aprovado3],
+		audios_nega : [snd_ativista_negado1, snd_ativista_negado2, snd_ativista_negado3]
 	},
 	
 	banqueiro : {
@@ -26,7 +29,10 @@ global.people = {
 		sprite_angry_front: spr_banqueiro_bravo_braco,
 		
 		sprite_happy: spr_banqueiro_feliz,
-		sprite_happy_front: spr_banqueiro_feliz_braco
+		sprite_happy_front: spr_banqueiro_feliz_braco,
+		
+		audios_aprov : [snd_banqueiro_aprovado1, snd_banqueiro_aprovado2, snd_banqueiro_aprovado3],
+		audios_nega : [snd_banqueiro_negado1, snd_banqueiro_negado2, snd_banqueiro_negado3]
 	},
 	
 	bispo : {
@@ -41,7 +47,10 @@ global.people = {
 		sprite_angry_front: spr_bispo_bravo_braco,
 		
 		sprite_happy: spr_bispo_feliz,
-		sprite_happy_front: noone
+		sprite_happy_front: noone,
+		
+		audios_aprov : [snd_bispo_aprovado1, snd_bispo_aprovado2, snd_bispo_aprovado3],
+		audios_nega : [snd_bispo_negado1, snd_bispo_negado2, snd_bispo_negado3]
 	},
 	
 	ministro : {
@@ -56,7 +65,10 @@ global.people = {
 		sprite_angry_front: spr_ministro_bravo,
 		
 		sprite_happy: noone,
-		sprite_happy_front: spr_ministro_feliz
+		sprite_happy_front: spr_ministro_feliz,
+		
+		audios_aprov : [snd_ministro_aprovado1, snd_ministro_aprovado2, snd_ministro_aprovado3],
+		audios_nega : [snd_ministro_negado1, snd_ministro_negado2, snd_ministro_negado3]
 	},
 	
 	reporter : {
@@ -72,7 +84,10 @@ global.people = {
 		sprite_angry_front: spr_reporter_brava,
 		
 		sprite_happy: spr_reporter_feliz,
-		sprite_happy_front: noone
+		sprite_happy_front: noone,
+		
+		audios_aprov : [snd_reporter_aprovado1, snd_reporter_aprovado2, snd_reporter_aprovado3],
+		audios_nega : [snd_reporter_negado1, snd_reporter_negado2, snd_reporter_negado3]
 	},
 	
 	policial : {
@@ -88,7 +103,10 @@ global.people = {
 		sprite_angry_front: spr_policial_bravo_braco,
 		
 		sprite_happy: spr_policial_feliz,
-		sprite_happy_front: spr_policial_feliz_braco
+		sprite_happy_front: spr_policial_feliz_braco,
+		
+		audios_aprov : [snd_policial_aprovado1, snd_policial_aprovado2, snd_policial_aprovado3],
+		audios_nega : [snd_policial_negado1, snd_policial_negado2, snd_policial_negado3]
 	},
 	
 	politico : {
@@ -104,7 +122,10 @@ global.people = {
 		sprite_angry_front: spr_politico_bravo_braco,
 		
 		sprite_happy: spr_politico_feliz,
-		sprite_happy_front: spr_politico_feliz_braco
+		sprite_happy_front: spr_politico_feliz_braco,
+		
+		audios_aprov : [snd_politico_aprovado1, snd_politico_aprovado2, snd_politico_aprovado3],
+		audios_nega : [snd_politico_negado1, snd_politico_negado2, snd_politico_negado3]
 	},
 	
 	traficante : {
@@ -119,7 +140,10 @@ global.people = {
 		sprite_angry_front: spr_traficante_bravo,
 		
 		sprite_happy: spr_traficante_feliz,
-		sprite_happy_front: noone
+		sprite_happy_front: noone,
+		
+		audios_aprov : [snd_traficante_aprovado1, snd_traficante_aprovado2, snd_traficante_aprovado3],
+		audios_nega : [snd_traficante_negado1, snd_traficante_negado2, snd_traficante_negado3]
 	}
 }
 
@@ -531,8 +555,8 @@ global.cards =
 		aceito: "+5 din; +5 aprov;  -10 inf",
 		negar: "Pichar não é arte.",
 		negado: "-5 din; -5 aprov; +10 inf",
-		fala: "A pichação é como a arte da cidade, você não pode só passar tinta cinza por cima.",
-		papel: "Preservar as pichações?",
+		fala: "O grafite é como a arte da cidade, você não pode só passar tinta cinza por cima.",
+		papel: "Preservar os grafites?",
 		audio: snd_ativista_8
 	},
 	ativista_9: {
@@ -558,10 +582,10 @@ global.cards =
 	midia_1 : {
 		owner : global.people.reporter,
 		aprovar: "Nada a esconder, abriremos as contas para todos verem.",
-		aceito: "+15 aprov; -15 din",
+		aceito: "+15 aprov; - 5din",
 		negar: "Isso é perseguição política, não gastaremos energia com isso.",
 		negado: "-15 aprov; +10 din",
-		fala: "Um telejornal investiga supostos gastos excessivos no seu gabinete.",
+		fala: "Um telejornal investiga suposto desvios de verba em sua administração. Como irá responder? ",
 		papel: "Abrir as contas para todos verem?",
 		audio: snd_reporter_1
 	},
@@ -583,7 +607,7 @@ global.cards =
 		aceito: "-15 aprov; +15 din; +10 inf",
 		negar: "Liberdade de imprensa é inegociável, mesmo que doa.",
 		negado: "+15 aprov; -10 din",
-		fala: "Manchetes internacionais acusam o país de censura à imprensa.",
+		fala: "Certas empresas de jornalismo estão preocupados com censura no seu governo. Como o senhor responde?",
 		papel: "Proteger a imagem do país filtrando informações?",
 		audio: snd_reporter_3
 	},
@@ -605,29 +629,29 @@ global.cards =
 		aceito: "+15 din; -15 aprov",
 		negar: "Vamos processar e exigir retratação imediata.",
 		negado: "-15 din; +15 aprov",
-		fala: "Uma reportagem sensacionalista distorce dados do seu governo.",
+		fala: " Uma reportagem sensacionalista está alienando os telespectadores. Como deveriamos responder?",
 		papel: "Processar a mídia por distorção de dados?",
 		audio: snd_reporter_5
 	},
 
 	midia_6 : {
 		owner : global.people.reporter,
-		aprovar: "Mostrem ao país que estamos trabalhando.",
+		aprovar: "Do arquiteto.",
 		aceito: "+10 aprov; -15 din",
-		negar: "Prefiro que as ações falem mais alto que as imagens.",
-		negado: "-10 aprov; +10 din",
-		fala: "Uma rede de TV quer transmitir ao vivo a inauguração de uma obra pública.",
-		papel: "Permitir a transmissão ao vivo da inauguração?",
+		negar: "Da construtora.",
+		negado: "-10 inf; +10 aprov",
+		fala: "Durante a inauguração de uma obra pública, a estrutura colapsou. Isso é culpa da construtora, ou do arquiteto?",
+		papel: "A culpa seria de quem?",
 		audio: snd_reporter_6
 	},
 
 	midia_7 : {
 		owner : global.people.reporter,
 		aprovar: "Não responderemos a ataques pessoais.",
-		aceito: "-15 aprov; +15 din",
+		aceito: "-10 aprov; -5 inf; +10 com",
 		negar: "Portas abertas para diálogo.",
 		negado: "+15 aprov; -10 din",
-		fala: "Um influencer popular faz críticas pesadas à sua gestão nas redes sociais.",
+		fala: " Um influencer está fazendo críticas pesadas a sua administração, como o senhor irá responder?",
 		papel: "Responder às críticas do influencer?",
 		audio: snd_reporter_7
 	},
@@ -638,7 +662,7 @@ global.cards =
 		aceito: "+10 aprov; -20 din",
 		negar: "Não aceito barganhas que comprometam nossa integridade.",
 		negado: "+15 aprov; -5 din",
-		fala: "Um jornal famoso oferece apoio político em troca de benefícios.",
+		fala: "Uma empresa vem pedir incentivo em troca de fazer um documentário sobre o país.",
 		papel: "Aceitar a barganha do jornal?",
 		audio: snd_reporter_8
 	},
@@ -671,7 +695,7 @@ global.cards =
 		aceito: "-15 aprov; +15 inf",
 		negar: "Não são eles que escolhem",
 		negado: "-10 inf; +10 aprov",
-		fala: "Senhor, Infelizmente um dos nossos policiais assasinaram um jovem durante uma operação, nós conseguimos parar a informação de chegar no publico, porem a comunidade local esta ameaçando entrar em greve.",
+		fala: "Boatos falsos se espalham rapidamente pelas redes sociais sobre uma crise inexistente, o que o senhor tem a dizer sobre isso?",
 		papel: "Divulgar a informação sobre o assassinato?",
 		audio: snd_policial_1
 	},

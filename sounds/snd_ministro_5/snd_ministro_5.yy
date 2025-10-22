@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.942313,
+  "duration":9.75322,
   "name":"snd_ministro_5",
   "parent":{
     "name":"Ministro",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_ministro_5.wav",
+  "soundFile":"snd_ministro_5.mp3",
   "type":0,
   "volume":1.0,
 }

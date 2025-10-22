@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.4094558,
+  "duration":4.403084,
   "name":"snd_reporter_1",
   "parent":{
     "name":"Reporter",
