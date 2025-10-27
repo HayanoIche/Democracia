@@ -1,7 +1,8 @@
 /// @description
 if (index == 0)
 {
-	draw_sprite_ext(spr_game_title, 0, room_width/2, room_height/2 - y/2 - 30, 2, 2, 0, c_white, 1);
+	draw_sprite_ext(spr_background_menu, 0, 0, 0, 2, 2, 0, c_white, 1);
+	draw_sprite_ext(spr_game_title, 0, room_width/2, room_height/2 - 126, 2.5, 2.5, 0, c_white, 1);
 }
 
 draw_self();

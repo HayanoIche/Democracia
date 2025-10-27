@@ -582,7 +582,7 @@ global.cards =
 	midia_1 : {
 		owner : global.people.reporter,
 		aprovar: "Nada a esconder, abriremos as contas para todos verem.",
-		aceito: "+15 aprov; - 5din",
+		aceito: "+15 aprov; -5 din",
 		negar: "Isso é perseguição política, não gastaremos energia com isso.",
 		negado: "-15 aprov; +10 din",
 		fala: "Um telejornal investiga suposto desvios de verba em sua administração. Como irá responder? ",

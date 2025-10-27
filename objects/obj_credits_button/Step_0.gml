@@ -6,8 +6,9 @@ if (mouse_check_button_pressed(mb_left))
 {
 	switch(index)
 	{
-		case 0: obj_game_manager.started = true; break;
-		case 1: create_textbox("TESTE") break;
-		case 2: game_end() break;
+		case 0:
+			room_restart();
+			instance_destroy(self);
+			break;
 	}
 }
