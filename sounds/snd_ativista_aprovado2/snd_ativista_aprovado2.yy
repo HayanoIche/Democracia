@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.5534015,
+  "duration":1.5859411,
   "name":"snd_ativista_aprovado2",
   "parent":{
     "name":"Aprovado&Negado",

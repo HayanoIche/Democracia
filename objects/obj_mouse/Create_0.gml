@@ -1,4 +1,4 @@
 /// @description
 window_set_cursor(cr_none);
 
-depth = -9100;
+depth = -9990;
