@@ -29,6 +29,8 @@ current_npc = noone;
 npc_count = 0;
 npc_total_per_day = 20;
 
+ended = false;
+
 // Nota: Bizarro como na gamemaker vc pode só chamar "bring_new_person()" e FODASE
 // funciona perfeitamente. Na Godot tem como fazer isso tbm, só é mais opcional -- BAGOS
 current_npc = noone;
@@ -114,35 +116,55 @@ function resource_check() {
         
         // Checa falha (<= 0)
         if (resource_value <= 0) {
+			ended = true;
             resource_failure(resource_name);
         }
+		
         // Checa vitoria entre aspsas (>= 100)
         else if (resource_value >= 100) {
+			ended = true;
             resource_overachieve(resource_name);
         }
     }
 }
 
 function resource_failure(resource_name) {
+	if (room != rm_endgame)
+	{
+		if (day_background_alpha < 1) {
+			day_background_alpha += 0.01;
+		} else {
+			room_goto(rm_endgame);
+		}
+	}
+	else
+	{
+		if (day_background_alpha > 0) {
+			day_background_alpha -= 0.01;
+		} else {
+			
+		}
+	}
+	
     switch (resource_name) {
         case "comida":
-            show_message("FAILURE: Você ficou sem comida! Seus cidadões estão passando fome!");
+			
             break;
 			
         case "aprovacao":
-            show_message("FAILURE: Taxa de aprovação muito baixa! Impeachment!");
+			
             break;
 			
         case "dinheiro":
-            show_message("FAILURE: Crise finânceira!");
+			
             break;
 			
         case "infraestrutura":
-            show_message("FAILURE: Infraestrutura colapsou!");
+            
             break;
 			
         default:
-            show_message("Não era pra isso aparecer || ERRO NO SISTEMA DE MOSTRAR FALHAS");
+				
             break;
     }
 }

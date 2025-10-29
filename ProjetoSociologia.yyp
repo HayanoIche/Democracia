@@ -74,6 +74,7 @@
     {"id":{"name":"obj_proceed","path":"objects/obj_proceed/obj_proceed.yy",},},
     {"id":{"name":"obj_table","path":"objects/obj_table/obj_table.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
+    {"id":{"name":"rm_endgame","path":"rooms/rm_endgame/rm_endgame.yy",},},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"id":{"name":"rm_menu_presstart","path":"rooms/rm_menu_presstart/rm_menu_presstart.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
@@ -284,6 +285,7 @@
     {"roomId":{"name":"rm_menu_presstart","path":"rooms/rm_menu_presstart/rm_menu_presstart.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_principal","path":"rooms/rm_principal/rm_principal.yy",},},
+    {"roomId":{"name":"rm_endgame","path":"rooms/rm_endgame/rm_endgame.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
