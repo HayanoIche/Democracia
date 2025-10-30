@@ -20,7 +20,11 @@ if (room != rm_endgame)
 		if (day_background_alpha < 1)
 		&& (room == rm_menu)
 		{
-			draw_sprite_ext(spr_tutorial, 0, 0, 0, 2, 2, 0, c_white, 1);
+			draw_sprite_ext(spr_background_menu, 0, 0, 0, 2, 2, 0, c_white, 1);
+			if (instance_exists(obj_proceed))
+			{
+				draw_sprite_ext(spr_tutorial, obj_proceed.txt_ind, 0, 0, 2, 2, 0, c_white, 1);
+			}
 		}
 	
 		draw_set_color(c_black);

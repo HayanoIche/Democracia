@@ -44,9 +44,9 @@ if (room != rm_endgame)
 			
 				if (!instance_exists(obj_proceed))
 				{
-					var _p = instance_create_depth(800/2 + 150, 500 - 102, -1000, obj_proceed);
-					_p.image_xscale = 9;
-					_p.image_yscale = 3;
+					var _p = instance_create_depth(800/2 + 160, 500 - 102, depth-1, obj_proceed);
+					_p.image_xscale = 1.75;
+					_p.image_yscale = 1.25;
 				}
 			
 			break; }
