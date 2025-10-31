@@ -26,7 +26,7 @@ if (action_index == "PRESSTART")
 }
 
 if (started == false) {exit};
-
+show_debug_message(room)
 if (day_is_over())
 && (action_index != "NIGHT")
 {
@@ -229,6 +229,6 @@ if (room != rm_endgame)
 
 	if (keyboard_check_pressed(vk_delete))
 	{
-		global.resources.infraestrutura += 2;
+		global.resources.comida += 2;
 	}
 }

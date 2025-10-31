@@ -1,0 +1,5 @@
+draw_set_colour(c_white)
+draw_set_alpha(image_alpha)
+draw_text(x, y, text)
+draw_set_alpha(1)
+draw_set_colour(c_black)

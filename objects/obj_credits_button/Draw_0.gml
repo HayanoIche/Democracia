@@ -30,7 +30,7 @@ draw_text_transformed(x + sprite_width/2 - string_width(_txt), y + sprite_height
 draw_set_colour(c_green)
 
 
-var _trans = 1;
+var _trans = 0.9;
 var _hspace = 1;
 var _yspace = 25;
 var _add = 0;
@@ -39,11 +39,11 @@ var _goon = [];
 
 draw_set_colour(c_gray)
 draw_set_alpha(0.6)
-	draw_rectangle(50 - 3 -6, 170 - 3-6, 761 + 3 + 6, 363 + 3 + 6, false)
+	draw_rectangle(50 - 3 -6, 165 - 3-6, 761 + 3 + 6, 363 + 3 + 6, false)
 	
 	draw_set_colour(c_black)
 	
-draw_rectangle(50 - 3, 170 - 3, 761 + 3, 363 + 3, false)
+draw_rectangle(50 - 3, 165 - 3, 761 + 3, 363 + 3, false)
 
 draw_set_colour(c_white)
 draw_set_alpha(1)
@@ -57,7 +57,7 @@ for (var _i = 0; _i < array_length(amigos_3pjd); _i ++){
 		_add += string_width(amigos_3pjd[_i] + "    ") *_trans;
 		array_push(_goon, amigos_3pjd[_i] + "    ");
 	}else{
-		if (_add + string_width(amigos_3pjd[_i] + "    ")*_trans + 10 < room_width && _i+1 < array_length(amigos_3pjd)){
+		if (_add + string_width(amigos_3pjd[_i])*_trans  < room_width - 90&& _i+1 < array_length(amigos_3pjd)){
 			current_line += amigos_3pjd[_i] + "    ";
 			_add += string_width(amigos_3pjd[_i] + "    ")*_trans;
 			array_push(_goon, amigos_3pjd[_i] + "    ");
@@ -68,7 +68,7 @@ for (var _i = 0; _i < array_length(amigos_3pjd); _i ++){
 			_add += string_width(amigos_3pjd[_i] + "    ")*_trans;
 			array_push(_goon, amigos_3pjd[_i] + "    ");
 			}
-			draw_text_ext_transformed(50, _line*_yspace + 170, current_line, 0, 99999999999999, _trans, _trans, 0)
+			draw_text_ext_transformed(50, _line*_yspace + 165, current_line, 0, 99999999999999, _trans, _trans, 0)
 			
 			/*for (var _a = 0; _a < array_length(_goon); _a++){
 				var _pog = 0; 
@@ -100,3 +100,6 @@ for (var _i = 0; _i < array_length(amigos_3pjd); _i ++){
 
 
 current_line = "";
+
+
+with(obj_mouse){draw_self()}
