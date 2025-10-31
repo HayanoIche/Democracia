@@ -34,3 +34,4 @@ instance_create_depth(x, y, depth, obj_NPC_front);
 
 x = RESOLUTION_WIDTH/2;
 y = 80;
+

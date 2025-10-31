@@ -11,7 +11,7 @@ if (aprov_state == "aproved") {
 	audio_play_sound(person.audios_aprov[irandom_range(0, 2)], 5, false);
 }
 
-
+clock_start();
 
 
 

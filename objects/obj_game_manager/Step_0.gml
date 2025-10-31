@@ -1,6 +1,6 @@
 // Baguio Debug
 if (room == rm_menu_presstart) {exit};
-
+if (room == rm_creditos){exit;}
 clock_update();
 
 global.delta_t = (delta_time/1000000) * game_get_speed(gamespeed_fps);
@@ -98,7 +98,6 @@ if (room != rm_endgame)
 			if (timer <= 0)
 			{
 				action_index = "APPOINTMENT";
-				clock_start();
 				timer = 60*2;
 			}
 		
@@ -230,6 +229,6 @@ if (room != rm_endgame)
 
 	if (keyboard_check_pressed(vk_delete))
 	{
-		global.resources.comida -= 2;
+		global.resources.infraestrutura += 2;
 	}
 }

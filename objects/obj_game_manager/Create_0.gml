@@ -30,6 +30,7 @@ npc_count = 0;
 npc_total_per_day = 20;
 
 ended = false;
+end_text = ""; //basicamente pra setar qual é o texto da perda
 
 // Nota: Bizarro como na gamemaker vc pode só chamar "bring_new_person()" e FODASE
 // funciona perfeitamente. Na Godot tem como fazer isso tbm, só é mais opcional -- BAGOS
@@ -148,19 +149,20 @@ function resource_failure(resource_name) {
 	
     switch (resource_name) {
         case "comida":
+			end_text = "Prateleiras vazias e filas intermináveis para um punhado de comida se tornaram a nova e triste realidade nos centros urbanos.Uma crise de escassez de alimentos básicos levou a protestos violentos, e ao seu impeachment." 
 			
             break;
 			
         case "aprovacao":
-			
+			end_text = "Manifestações massivas tomam as ruas diariamente, pedindo a sua renúncia. O país está ingovernável. O exército se virou contra o senhor, impondo uma transferência de poder."
             break;
 			
         case "dinheiro":
-			
+			end_text = "Os cofres públicos estão vazios. Servidores públicos entram em greve e serviços essenciais estão à beira do colapso por falta de pagamento. A dívida nacional atinge niveis históricos, levando a uma forte crise econômica." 
             break;
 			
         case "infraestrutura":
-            
+            end_text = "As estradas estão intrafegáveis, pontes caíram e o sistema de saneamento básico entrou em colapso, espalhando doenças. A internet e as comunicações são um luxo raro, isolando cidades inteiras e paralisando a economia digital."
             break;
 			
         default:
@@ -170,18 +172,34 @@ function resource_failure(resource_name) {
 }
 
 function resource_overachieve(resource_name) {
+	if (room != rm_endgame)
+	{
+		if (day_background_alpha < 1) {
+			day_background_alpha += 0.01;
+		} else {
+			room_goto(rm_endgame);
+		}
+	}
+	else
+	{
+		if (day_background_alpha > 0) {
+			day_background_alpha -= 0.01;
+		} else {
+			
+		}
+	}
     switch (resource_name) {
         case "comida":
-            show_message("OVERACHIEVE: Você tem muita comida! A elite se voltou contra você!");
+            end_text = "A produção desenfreada de alimentos monocultura esgotou o solo e contaminou os lençóis freáticos com agrotóxicos. Os agricultores quebraram após o governo comprar estoques exorbitantes a preços inflados, destruindo o mercado interno."
             break;
         case "aprovacao":
-            show_message("OVERACHIEVE: Aprovação máxima! Você virou um ditador!");
+           end_text = "Aclamação total permitiu que você concentrasse poder, alterando a constituição. Seu regime é 'estável', mas a comunidade internacional impõe sanções e o rotula de ditador."
             break;
         case "dinheiro":
-            show_message("OVERACHIEVE: Abundância de dinheiro, a economia colapsou!");
+            end_text = "A riqueza descontrolada inflou nossa moeda. Os preços dispararam, enquanto o valor da moeda continua caindo, levando a uma forte crise econômica. Agora, o valor da nossa moeda é menor que o papel em que é impressa."
             break;
         case "infraestrutura":
-            show_message("OVERACHIEVE: Infraestrutura alta, os militares se viraram contra você!");
+            end_text = "O superfaturamento em megaprojetos faraônicos drenou outros setores e deixou a manutenção da infraestrutura existente de lado, causando mais problemas do que soluções."
             break;
         default:
             show_message("Não era pra isso aparecer || ERRO NO SISTEMA DE MOSTRAR OVERACHIEVE sla");

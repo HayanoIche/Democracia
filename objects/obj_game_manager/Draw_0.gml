@@ -1,5 +1,6 @@
 /// @description
 if (room == rm_menu_presstart) {exit};
+if(room == rm_creditos){exit}
 
 if (room != rm_endgame)
 {
@@ -162,4 +163,14 @@ else
 	draw_rectangle(0, 0, room_width, room_height, false);
 	draw_set_color(c_white);
 	draw_set_alpha(1);
+	if(day_background_alpha <= 0){
+		draw_set_alpha(0.6)
+		draw_rectangle(30 - 10, 30 - 10, RESOLUTION_WIDTH - 30 + 10, RESOLUTION_HEIGHT - 30 + 10, false);
+		draw_set_colour(c_black)
+		draw_rectangle(30, 30, RESOLUTION_WIDTH - 30, RESOLUTION_HEIGHT - 30, false)
+		
+		draw_set_colour(c_white);
+		draw_set_alpha(1);
+		draw_text_ext_transformed(30 + 6, 30, end_text, string_height(end_text), (RESOLUTION_WIDTH)/2.5 - 30 - 6, 2.5, 2.5, 0)
+	}
 }

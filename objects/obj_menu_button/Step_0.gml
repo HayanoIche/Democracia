@@ -9,7 +9,7 @@ if (mouse_check_button_pressed(mb_left))
 		case 0: obj_game_manager.started = true; break;
 		case 1:
 			instance_destroy(obj_menu_button)
-			instance_create_depth(x, y, 0, obj_credits_button)
+			instance_create_depth(x, y, depth, obj_credits_button)
 			break;
 		case 2: game_end() break;
 	}
