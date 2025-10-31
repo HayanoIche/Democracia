@@ -492,7 +492,7 @@ global.cards =
 	ativista_2: {
 		owner : global.people.ativista,
 		aprovar: "Nossos inimigos.",
-		aceito: "+10 din; - 5 inf; -10 aprov",
+		aceito: "+10 din; -5 inf; -10 aprov",
 		negar: "A internet é livre.",
 		negado: "+5 aprov",
 		fala: "A internet não é um lugar seguro para crianças. Por isso derrubamos websites que podem ser prejudiciais para crianças. E se você quiser podemos derrubar os dos seus inimigos políticos também...",
