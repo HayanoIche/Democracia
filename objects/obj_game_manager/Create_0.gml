@@ -32,6 +32,8 @@ npc_total_per_day = 20;
 ended = false;
 end_text = ""; //basicamente pra setar qual é o texto da perda
 end_title = "";
+game_is_literally_ending = false;
+should_draw_the_end_text = false;
 
 // Nota: Bizarro como na gamemaker vc pode só chamar "bring_new_person()" e FODASE
 // funciona perfeitamente. Na Godot tem como fazer isso tbm, só é mais opcional -- BAGOS
@@ -161,7 +163,7 @@ function resource_failure(resource_name) {
             break;
 			
         case "dinheiro":
-			end_title = "POUCA DINHEIRO";
+			end_title = "POUCO DINHEIRO";
 			end_text = "Os cofres públicos estão vazios. Servidores públicos entram em greve e serviços essenciais estão à beira do colapso por falta de pagamento. A dívida nacional atinge niveis históricos, levando a uma forte crise econômica." 
             break;
 			

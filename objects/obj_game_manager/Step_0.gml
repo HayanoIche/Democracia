@@ -231,4 +231,9 @@ if (room != rm_endgame)
 	{
 		global.resources.comida += 2;
 	}
+} else{
+	if (keyboard_check_pressed(vk_anykey)){game_is_literally_ending = true;
+			game_restart();
+	}
+	
 }

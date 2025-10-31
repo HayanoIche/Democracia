@@ -163,7 +163,8 @@ else
 	draw_rectangle(0, 0, room_width, room_height, false);
 	draw_set_color(c_white);
 	draw_set_alpha(1);
-	if(day_background_alpha <= 0){
+	if(day_background_alpha <= 0){should_draw_the_end_text = true};
+	if(should_draw_the_end_text){
 		draw_set_colour(c_red)
 		draw_text_transformed(RESOLUTION_WIDTH/2 - string_width(end_title)/2 * 4.5, 10, end_title, 4.5, 4.5, 0)
 		draw_set_colour(c_gray)

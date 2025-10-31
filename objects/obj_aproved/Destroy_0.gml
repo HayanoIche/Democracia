@@ -42,7 +42,7 @@ var _aproved_string = "";
                 show_debug_message("Que porra de recurso é esse aqui: " + resource);
                 break;
         }
-		var _p = instance_create_depth(x + random_range(-20, 20), y + (random_range(-20, 20)) + i *40 + 50, depth, obj_aprov_txt)
+		var _p = instance_create_depth(x + random_range(-20, 20), y + (random_range(-10, 10)) + i *40 + 50, depth, obj_aprov_txt)
 		_p.text = _aproved_string;
 		_aproved_string = "";
     }
