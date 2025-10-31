@@ -3,7 +3,7 @@ function clock_init() {
     global.clock = {
         time_current: 9 * 60,  // Começa as 9 (em minutos)
         day_start: 9 * 60,     // 9:00 em minutos
-        day_end: 19 * 60,      // 19:00 em minutos
+        day_end:  19 * 60,      // 19:00 em minutos
         time_scale: 6,         // Default: 2 minutos pra cada segundo real
         is_running: false,
 		day_over: false

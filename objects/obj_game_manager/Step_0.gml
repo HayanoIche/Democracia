@@ -26,7 +26,7 @@ if (action_index == "PRESSTART")
 }
 
 if (started == false) {exit};
-show_debug_message(room)
+
 if (day_is_over())
 && (action_index != "NIGHT")
 {
@@ -53,9 +53,11 @@ if (room != rm_endgame)
 	
 		case "DAY CHANGING": {
 				change_day_cutscene();
+				
 			break; }
 		
 		case "WAITING SOMEONE": {
+
 			// caso já tenha alguém aqui ele coloca a próxima na lista de espera
 			if abs(global.clock.time_current - global.persons.first.time) < 1
 			|| abs(global.clock.time_current - global.persons.second.time) < 1
@@ -181,6 +183,7 @@ if (room != rm_endgame)
 		case "DAY END": {
 			if (day_background_alpha < 1)
 			{
+				audio_stop_all();
 				day_background_alpha += 0.005;
 				timer = 0;
 			}
@@ -200,6 +203,7 @@ if (room != rm_endgame)
 				else
 				{
 					action_index = "NIGHT";
+					audio_play_sound(snd_day_goon, 0, false);
 					timer = 0;
 				}
 			}
@@ -226,14 +230,22 @@ if (room != rm_endgame)
 				}
 			break; }
 	}
-
-	if (keyboard_check_pressed(vk_delete))
-	{
-		global.resources.comida += 2;
+		if (global.day == 11){
+		won = true;
+		ended = true;
+		room_goto(rm_endgame)
 	}
 } else{
-	if (keyboard_check_pressed(vk_anykey)){game_is_literally_ending = true;
-			game_restart();
+	if (won){
+		end_title = "VOCE GANHOU!\nPARABENS !!!!!"
+		if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){game_is_literally_ending = true;
+				game_restart();
+		}
+	}else{
+		if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)){game_is_literally_ending = true;
+				game_restart();
+		}
 	}
-	
 }
+
+

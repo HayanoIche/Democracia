@@ -48,5 +48,5 @@
 		_p.text = _denided_string;
 		_denided_string = "";
     }
-
+audio_play_sound(snd_approv, 0, false)
 	

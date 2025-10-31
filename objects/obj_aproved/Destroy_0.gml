@@ -47,3 +47,4 @@ var _aproved_string = "";
 		_aproved_string = "";
     }
 	
+	audio_play_sound(snd_approv, 0, false)

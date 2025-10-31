@@ -7,6 +7,8 @@ global.delta_t = delta_time / 1000000;
 
 action_index = "PRESSTART";
 
+_song = undefined
+
 started = false;
 
 day_text_timer = 0;
@@ -46,6 +48,8 @@ start_aprovacao = 0;
 start_infraestrutura = 0;
 start_comida = 0;
 
+
+
 change_day_cutscene = function()
 {
 	// Começando a animação de trocar de dia
@@ -66,6 +70,16 @@ change_day_cutscene = function()
 			}
 			else
 			{
+				
+
+				var _bckgrnd = layer_background_get_id("Background");
+				var _index = 0
+				if(global.resources.infraestrutura <= 25){ _index = 0;}
+				if(global.resources.infraestrutura > 25 &&global.resources.infraestrutura < 79){_index = 1};
+				if(global.resources.infraestrutura >= 80){ _index = 2;}
+				
+				
+				layer_background_index(_bckgrnd, _index)
 				room_goto(rm_principal);
 				day_text_alpha = 1;
 				day_changed = true;
@@ -103,7 +117,9 @@ change_day_cutscene = function()
 				start_aprovacao = global.resources.aprovacao;
 				start_infraestrutura = global.resources.infraestrutura;
 				start_comida = global.resources.comida;
-				
+				if (!audio_is_playing(snd_goon_music)){
+					audio_play_sound(snd_goon_music, 0, true, .7)
+				}
 				clock_start();
 			}
 		}
@@ -220,5 +236,6 @@ function resource_overachieve(resource_name) {
 
 day_end_y_buff = 0;
 day_stat_buff = 0;
+won = false
 
 depth = -9500;
