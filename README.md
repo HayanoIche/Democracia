@@ -18,10 +18,10 @@
 
 ## GAMEPLAY
 
-<img src = "./Imagens/gameplay1.png" width=48% height="auto">
-<img src = "./Imagens/gameplay2.png" width=48% height="auto">
-<img src = "./Imagens/gameplay3.png" width=48% height="auto">
-<img src = "./Imagens/gameplay4.png" width=48% height="auto">
+<img src = "./Imagens/gameplay1.png" width=45% height="auto">
+<img src = "./Imagens/gameplay2.png" width=45% height="auto">
+<img src = "./Imagens/gameplay3.png" width=45% height="auto">
+<img src = "./Imagens/gameplay4.png" width=45% height="auto">
 
 Você jogará durante 10 dias como o grande PRESIDENTE DA REPÚBLICA, e precisa tomar as decisões mais perspicases para manter sua nação de pé, ou, simplesmente falhar e a levar a RUÍNA!!!! Durante os dias, irám vir várias pessoas a sala precisidencial, fazendo propostas, basta o jogador decidir se aceitaram a proposta, ou não...
 
